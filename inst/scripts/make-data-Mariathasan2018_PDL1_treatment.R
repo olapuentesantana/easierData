@@ -1,19 +1,22 @@
-# Download mariathasan processed data
-
-# Processed data used in Mariathasan, S., Turley, S., Nickles, D. et al.
+# ***************************************************************************
+# Processed data from Mariathasan, S., Turley, S., Nickles, D. et al.
 # TGFβ attenuates tumour response to PD-L1 blockade by contributing to exclusion of T cells.
 # Nature 554, 544–548 (2018). https://doi.org/10.1038/nature25501
 
 # RNA-seq processed data of Mariathasan cohort is made available via IMvigor210CoreBiologies package.
 # We follow instructions provided in http://research-pub.gene.com/IMvigor210CoreBiologies/)
 # to derive the data.
+# ***************************************************************************
 
 # creating a function to clean up the data and to retrieve the data of interest.
 preprocess_mariathasan <- function(cds,
                                    verbose = TRUE) {
-  library(utils)
-  library(Biobase)
-  library(BiocGenerics)
+
+  suppressPackageStartupMessages({
+    library(utils)
+    library(Biobase)
+    library(BiocGenerics)
+  })
 
   # Load CountDataSet object
   utils::data(cds)
@@ -60,7 +63,7 @@ preprocess_mariathasan <- function(cds,
   return(data)
 }
 
-# Retrieve data from package
+# Install and load IMvigor210CoreBiologies package
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
@@ -83,7 +86,7 @@ BiocManager::install(c("biomaRt",
 install.packages("path/to/IMvigor210CoreBiologies_1.0.0.tar.gz", repos = NULL)
 library(IMvigor210CoreBiologies)
 
-# retrieve data
+# Retrieve data using previously defined function
 data(cds)
 mariathasan_data <- preprocess_mariathasan(cds)
 rm(cds)
@@ -97,18 +100,6 @@ patient_response[,1] <- gsub("PD","NR", patient_response[,1])
 
 # retrieve Tumor Mutational Burden
 TumorMutationalBurden <- clinical_data[, "FMOne mutation burden per MB", drop=FALSE]
-# names(TumorMutationalBurden) <- rownames(clinical_data)
-# # Create a external dataset object
-# setClass("DatasetExample", slots=list(name="character", counts="data.frame", tpm="data.frame", response="character", TMB="numeric", cancertype="character"))
-#
-# dataset_mariathasan <- new("DatasetExample",
-#                            name="Mariathasan",
-#                            counts=mariathasan_data$counts,
-#                            tpm=mariathasan_data$tpm,
-#                            response=patient_response,
-#                            TMB=TumorMutationalBurden,
-#                            cancertype="BLCA"
-# )
 
 # ready to construct the SummarizedExperiment object
 library(SummarizedExperiment)
@@ -136,6 +127,6 @@ Mariathasan2018_PDL1_treatment <- SummarizedExperiment(
 )
 
 # save
-save(Mariathasan2018_PDL1_treatment, file = "inst/extdata/Mariathasan2018_PDL1_treatment.rda")
+save(Mariathasan2018_PDL1_treatment, file = "inst/extdata/Mariathasan2018_PDL1_treatment.Rda")
 
 

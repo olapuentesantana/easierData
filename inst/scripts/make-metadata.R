@@ -1,6 +1,3 @@
-## validate with `ExperimentHubData::makeExperimentHubMetadata()`
-## (do this above pkg directory)
-
 Mariathasan2018_PDL1_treatment <- data.frame(
   stringsAsFactors = FALSE,
   Title = "Mariathasan2018_PDL1_treatment",
@@ -21,46 +18,50 @@ Mariathasan2018_PDL1_treatment <- data.frame(
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
-  DataProvider = paste(
+  DataProvider = paste("IMvigor210CoreBiologies package; ",
     "Mariathasan S, Turley S, Nickles D et al., “TGF-b",
     "attenuates tumor response to PD-L1 blockade by contributing to exclusion of T cells."
   ),
-  Maintainer = "Oscar Lapuente-Santana <o.lapuente.santana@tue.nl>",
+  Maintainer = "Oscar Lapuente-Santana <oscar.lapuente.santana@gmail.com>",
   RDataClass = "SummarizedExperiment",
   DispatchClass = "Rda",
-  RDataPath = "easier/Mariathasan2018_PDL1_treatment.Rda"
+  RDataPath = "easierData/Mariathasan2018_PDL1_treatment.Rda"
 )
 
-easierData <- data.frame(
+easier_internal <- data.frame(
   stringsAsFactors = FALSE,
-  Title = "easierData",
+  Title = "easier_internal",
   Description = paste(
     "Internal data required for proper performance of easier package. This data includes:",
-    "cancer-specifc model parameters learned during training, mean and standard deviation of the",
-    "expression of each gene across all TCGA cancer types, the list of genes used to compute",
-    "correlated proxies of immune response, cancer-specific intercellular networks based on",
-    "literature supported pairs from the Ramilowski database (Ramilowski et al., Nat.Commun., 2015),",
-    "the frequency of each ligand-receptor pair feature across the whole TCGA database,",
-    "information on how ligand-receptor pairs were grouped, annotations on approved gene symbols",
-    "gene signatures included in the immune resistance program from Jerby-Arnon et al., 2018."
+    "cancer-specifc model parameters learned during training, mean and standard deviation of the features",
+    "used during training, mean and standard deviation of the expression of each gene across all TCGA cancer",
+    "types, the list of genes used to compute correlated proxies of immune response, cancer-specific",
+    "intercellular networks based on literature supported pairs from the Ramilowski database",
+    "(Ramilowski et al., Nat.Commun., 2015), the frequency of each ligand-receptor pair feature across",
+    "the whole TCGA database, information on how ligand-receptor pairs were grouped, annotations on",
+    "approved gene symbols and gene signatures included in the immune resistance program from",
+    "Jerby-Arnon et al., 2018."
   ),
   BiocVersion = "3.13",
   Genome = NA,
-  SourceType = "tar.gz",
+  SourceType = "Rda",
   SourceUrl = NA,
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
   Coordinate_1_based = NA,
   DataProvider = NA,
-  Maintainer = "Oscar Lapuente-Santana <o.lapuente.santana@tue.nl>",
-  RDataClass = "list",
+  Maintainer = "Oscar Lapuente-Santana <oscar.lapuente.santana@gmail.com>",
+  RDataClass = "list;list;numeric;numeric;character;list;numeric;list;list;character",
   DispatchClass = "Rda",
-  RDataPath = "easier/easierData.Rda"
+  RDataPath = "easierData/easier_internal.Rda"
+)
+
+# combined meta-data
+easierData <- base::rbind(
+  Mariathasan2018_PDL1_treatment,
+  easier_internal
 )
 
 # write to .csv
-write.csv(rbind(
-  Mariathasan2018_PDL1_treatment,
-  easierData
-), file = "inst/extdata/metadata.csv", row.names = FALSE)
+write.csv(easierData, file = "inst/extdata/metadata.csv", row.names = FALSE)

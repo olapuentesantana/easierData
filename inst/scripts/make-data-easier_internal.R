@@ -1,5 +1,9 @@
 # Organize internal data needed by easier for proper performance
 
+
+# Load data objects
+load("easier_internal_data.Rda")
+
 # *******************************************
 ##  RMTLR_TCGA_cancer_spec_trained_models ##
 # *******************************************
@@ -96,5 +100,5 @@ save(opt_models,
   grouping_lrpairs_info,
   HGNC,
   res_sig,
-  file = "inst/extdata/easierData.rda"
+  file = "inst/extdata/easier_internal.Rda"
 )
