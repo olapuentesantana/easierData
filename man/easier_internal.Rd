@@ -30,8 +30,19 @@
 \examples{
     easier_internal(metadata = FALSE)
 }
-\format{multiple objects}
-\value{Returns several objects.}
+\format{Multiple objects:
+\describe{
+        \item{opt_models}{list}
+        \item{opt_xtrain_stats}{list}
+        \item{cor_genes_to_remove}{list}
+        \item{intercell_network_cancer_spec}{list}
+        \item{lr_frequency}{numeric}
+        \item{grouping_lrpairs_info}{list}
+        \item{HGNC}{data.frame}
+        \item{res_sig}{list}
+    }
+}
+\value{Returns multiple objects.}
 \author{
     Oscar Lapuente-Santana
 }

@@ -8,7 +8,7 @@
     \item{metadata}{Logical, whether only metadata should be returned}
 }
 \description{
-    The data object includes the following information on samples from 192 bladder cancer patients:
+    The data object includes information on samples from 192 bladder cancer patients:
     \describe{
         \item{name}{cohort name related to the original work from Mariathasan et al., Nature, 2018.}
         \item{counts}{gene expression matrix, counts derived from bulk RNA-seq.}
