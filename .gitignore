@@ -2,6 +2,16 @@
 .Rhistory
 .RData
 .Ruserdata
-inst/extdata/easier_internal.rda
+inst/extdata/opt_models.rds
 inst/extdata/Mariathasan2018_PDL1_treatment.rda
+inst/extdata/opt_xtrain_stats.rds
+inst/extdata/TCGA_mean_pancancer.rds
+inst/extdata/TCGA_sd_pancancer.rds
+inst/extdata/cor_scores_genes.rds
+inst/extdata/intercell_networks.rds
+inst/extdata/lr_frequency_TCGA.rds
+inst/extdata/group_lrpairs.rds
+inst/extdata/HGNC_annotation.rds 
+inst/extdata/scores_signature_genes.rds 
+
 

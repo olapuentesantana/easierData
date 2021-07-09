@@ -1,104 +1,105 @@
 # Organize internal data needed by easier for proper performance
-
-
-# Load data objects
-load("easier_internal_data.Rda")
+load("easier_internal.rda")
 
 # *******************************************
-##  RMTLR_TCGA_cancer_spec_trained_models ##
-# *******************************************
-# Cancer-specifc model parameters learned during training for different quantitative
-# descriptors using Regularized Multi-Task Linear Regression (RMTLR) algorithm with
-# randomized cross-validation repeated 100 times. A total of 100 models are available
-# for each task, here 10 tasks were used.
-# Also, information on training set statistics (i.e. meand and standard deviation
-# are also provided for normalizing the test set accordingly.
-# Models and training set statistics represented as a list.
-
-opt_models
-opt_xtrain_stats
-
-
-# *******************************************
-##  TCGA_pancancer_gene_statistics ##
+##  opt_models ##
 # *******************************************
 
-# Mean and standard deviation of the expression of each gene across all TCGA cancer types.
-# Each measure represented as a numeric vector Helpful for normalization steps.
+# Cancer-specifc model feature parameters learned, for each quantitative descriptor
+# during training using multi-task learning with randomized cross-validation repeated 100 times.
+# For each quantitative descriptor, 1000 models are available (100 per task).
 
-TCGA_mean_pancancer
-TCGA_sd_pancancer
-
-
-# *******************************************
-##  proxies_genes ##
-# *******************************************
-
-# Genes used to compute correlated proxies of immune response
-
-cor_genes_to_remove
+saveRDS(opt_models,
+        file = "inst/extdata/opt_models.rds"
+)
 
 # *******************************************
-##  intercellular_cancer_spec_network ##
+##  opt_xtrain_stats ##
 # *******************************************
 
-# Cancer-specific intercellular networks based on literature supported pairs
-# from the Ramilowski database (Ramilowski et al., Nat.Commun., 2015), filtering
-# for 24 cell types acknowledged to be present in the TME.
-# Additionally, a pan-cancer cell type is included using data from the CCLE
-# (Barretina et al., Nature, 2012) by computing the median expression of each
-# gene across cell lines related to the selected cancer types.
-# Represented as a list object with cancer-specific intercellular networks information.
+# Cancer-specific features mean and standard deviation of the training set used during
+# randomized cross-validation repeated 100 times. It is required for normalization of the test set.
 
-intercell_network_cancer_spec
+saveRDS(opt_xtrain_stats,
+        file = "inst/extdata/opt_xtrain_stats.rds"
+)
 
 # *******************************************
-##  LR_TCGA_frequency ##
+##  TCGA_mean_pancancer ##
 # *******************************************
 
-# Frequency of each ligand-receptor pair across the whole TCGA database.
+# Mean of the TPM expression of each gene across all TCGA cancer types.
+# It is required for normalization of input TPM gene expression data.
 
-lr_frequency
-
-# *******************************************
-##  grouping_LR_pairs ##
-# *******************************************
-
-# Information on how ligand-receptor pairs were grouped because of sharing
-# the same gene either as ligand or receptor.
-# Represented as a list object with information to group certain LR pairs.
-
-grouping_lrpairs_info
+saveRDS(TCGA_mean_pancancer,
+        file = "inst/extdata/TCGA_mean_pancancer.rds"
+)
 
 # *******************************************
-##  HGNC_checker ##
+##  TCGA_sd_pancancer ##
 # *******************************************
 
-# Information on gene symbols approved annotations.
-# Represented as a matrix, derived from https://www.genenames.org/tools/multi-symbol-checker/.
+# Standard deviation of the TPM expression of each gene across all TCGA cancer types.
+# It is required for normalization of input TPM gene expression data.
 
-HGNC
+saveRDS(TCGA_sd_pancancer,
+        file = "inst/extdata/TCGA_sd_pancancer.rds"
+)
+# *******************************************
+##  cor_scores_genes ##
+# *******************************************
+
+# Genes used to define correlated scores of immune response
+
+saveRDS(cor_scores_genes,
+        file = "inst/extdata/cor_scores_genes.rds"
+)
 
 # *******************************************
-##  RIR_signature ##
+##  intercell_networks ##
 # *******************************************
 
-# Gene signatures included in the immune resistance program from Jerby-Arnon et al., 2018.
-# Represented as a list object obtained from
-# https://github.com/livnatje/ImmuneResistance/blob/master/Results/Signatures/resistance.program.RData."
+# Cancer-specific intercellular networks, including a pan-cancer network
 
-res_sig
+saveRDS(intercell_networks,
+        file = "inst/extdata/intercell_networks.rds"
+)
+# *******************************************
+##  lr_frequency_TCGA ##
+# *******************************************
 
-# save easier data
-save(opt_models,
-  opt_xtrain_stats,
-  TCGA_mean_pancancer,
-  TCGA_sd_pancancer,
-  cor_genes_to_remove,
-  intercell_network_cancer_spec,
-  lr_frequency,
-  grouping_lrpairs_info,
-  HGNC,
-  res_sig,
-  file = "inst/extdata/easier_internal.Rda"
+# Frequency of each ligand-receptor pair feature across the whole TCGA database.
+
+saveRDS(lr_frequency_TCGA,
+        file = "inst/extdata/lr_frequency_TCGA.rds"
+)
+# *******************************************
+##  group_lrpairs ##
+# *******************************************
+
+# Information to group ligand-receptor pairs because of sharing the same gene",
+# either as ligand or receptor.
+
+saveRDS(group_lrpairs,
+        file = "inst/extdata/group_lrpairs.rds"
+)
+# *******************************************
+##  HGNC_annotation ##
+# *******************************************
+
+# Gene symbols approved annotations.
+# Represented as a data.frame, derived from https://www.genenames.org/tools/multi-symbol-checker/.
+
+saveRDS(HGNC_annotation,
+        file = "inst/extdata/HGNC_annotation.rds"
+)
+# *******************************************
+## scores_signature_genes ##
+# *******************************************
+
+# Gene signatures for each score of immune response:
+# CYT, TLS, IFNy, Ayers_expIS, Tcell_inflamed, Roh_IS, Davoli_IS, chemokines, IMPRES, MSI, RIR
+
+saveRDS(scores_signature_genes,
+        file = "inst/extdata/scores_signature_genes.rds"
 )
