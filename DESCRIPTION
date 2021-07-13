@@ -36,7 +36,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 biocViews:
-    RNAseqData, Software, Classification, ExperimentData, Regression
+    RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData
 Depends: R (>= 4.1.0)
 Imports: 
     ExperimentHub,

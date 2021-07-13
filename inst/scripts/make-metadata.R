@@ -10,7 +10,7 @@ Mariathasan2018_PDL1_treatment <- data.frame(
     "derived from IMvigor210CoreBiologies R package",
     "(Mariathasan et al., Nature, 2018) under the CC-BY license."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
   SourceType = "tar.gz",
   SourceUrl = "http://research-pub.gene.com/IMvigor210CoreBiologies/",
@@ -25,7 +25,7 @@ Mariathasan2018_PDL1_treatment <- data.frame(
   Maintainer = "Oscar Lapuente-Santana <oscar.lapuente.santana@gmail.com>",
   RDataClass = "SummarizedExperiment",
   DispatchClass = "Rda",
-  RDataPath = "easierData/Mariathasan2018_PDL1_treatment.Rda"
+  RDataPath = "easierData/Mariathasan2018_PDL1_treatment.rda"
 )
 
 opt_models <- data.frame(
@@ -36,10 +36,10 @@ opt_models <- data.frame(
     "during training using multi-task learning with randomized cross-validation repeated 100 times.",
     "For each quantitative descriptor, 1000 models are available (100 per task). "
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -58,10 +58,10 @@ opt_xtrain_stats <- data.frame(
     "Cancer-specific features mean and standard deviation of the training set used during",
     "randomized cross-validation repeated 100 times. It is required for normalization of input feautres."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -80,10 +80,10 @@ TCGA_mean_pancancer <- data.frame(
     "Mean of the TPM expression of each gene across all TCGA cancer types.",
     "It is required for normalization of input TPM gene expression data."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -102,10 +102,10 @@ TCGA_sd_pancancer <- data.frame(
     "Standard deviation of the TPM expression of each gene across all TCGA cancer types.",
     "It is required for normalization of input TPM gene expression data."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -123,10 +123,10 @@ cor_scores_genes <- data.frame(
   Description = paste(
     "Character string with genes used to define correlated scores of immune response."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -144,10 +144,10 @@ intercell_networks <- data.frame(
   Description = paste(
     "Cancer-specific intercellular networks, including a pan-cancer network."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -165,10 +165,10 @@ lr_frequency_TCGA <- data.frame(
   Description = paste(
     "Frequency of each ligand-receptor pair feature across the whole TCGA database."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -187,10 +187,10 @@ group_lrpairs <- data.frame(
     "Information to group ligand-receptor pairs because of sharing the same gene",
     "either as ligand or receptor."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
@@ -208,9 +208,9 @@ HGNC_annotation <- data.frame(
   Description = paste(
     "Gene symbols approved annotations."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "csv",
+  SourceType = "CSV",
   SourceUrl = "https://www.genenames.org/download/custom/",
   SourceVersion = NA,
   Species = "Homo sapiens",
@@ -230,10 +230,10 @@ scores_signature_genes <- data.frame(
     "Gene signatures for each score of immune response: CYT, TLS, IFNy, Ayers_expIS,",
     "Tcell_inflamed, Roh_IS, Davoli_IS, chemokines, IMPRES, MSI, RIR."
   ),
-  BiocVersion = "3.13",
+  BiocVersion = "3.14",
   Genome = NA,
-  SourceType = "Rda",
-  SourceUrl = NA,
+  SourceType = "RDA",
+  SourceUrl = "https://www.cell.com/patterns/fulltext/S2666-3899(21)00126-4",
   SourceVersion = NA,
   Species = "Homo sapiens",
   TaxonomyId = "9606",
