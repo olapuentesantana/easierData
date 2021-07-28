@@ -11,7 +11,10 @@ vignette: >
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
 # Load easier data
@@ -45,29 +48,30 @@ The `easierData` data package also includes multiple data objects so-called inte
     
 - **scores_signature_genes**: gene signatures for each score of immune response: CYT, TLS, IFNy, Ayers_expIS, Tcell_inflamed, Roh_IS, Davoli_IS, chemokines, IMPRES, MSI and RIR.
 
-The contents of the package can be seen by querying the annotaitonHub for the package name
+The contents of the package can be seen by querying annotationHub for the package name:
 ```{r}
-# suppressPackageStartupMessages({
-#     library(ExperimentHub)
-#     library(SummarizedExperiment)
-#     library(easierData)
-# })
+suppressPackageStartupMessages({
+    library(ExperimentHub)
+    library(easierData)
+})
 
-# eh <- ExperimentHub()
-# query(eh, "easierData")
+
+eh <- ExperimentHub()
+query(eh, "easierData")
 ```
 
 The individual data objects can be accessed using either their ExperimentHub
 accession number, or the convenience functions provided in this package. For
 instance to access the Mariathasan2018_PDL1_treatment example dataset:
 
-```{r}
-# mariathasan_dataset <- eh[[""]]
-# mariathasan_dataset
-# mariathasan_dataset <- Mariathasan2018_PDL1_treatment()
-# mariathasan_dataset
+```{r, message=FALSE}
+mariathasan_dataset <- eh[["EH6677"]]
+mariathasan_dataset
+
+mariathasan_dataset <- Mariathasan2018_PDL1_treatment()
+mariathasan_dataset
 ```
-# sessionInfo()
+# Session info
 
 ```{r sessionInfo}
 sessionInfo()
