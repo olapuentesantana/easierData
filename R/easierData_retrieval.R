@@ -45,3 +45,144 @@ get_Mariathasan2018_PDL1_treatment <- function() {
   return(ehub_data)
 }
 
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_opt_models <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_opt_xtrain_stats <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_TCGA_mean_pancancer <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_TCGA_sd_pancancer <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_cor_scores_genes <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_intercell_networks <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_lr_frequency_TCGA <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_group_lrpairs <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_HGNC_annotation <- function() {
+
+}
+
+
+#' Title
+#'
+#' @return TODO
+#' @export
+#'
+#' @examples
+#' if (interactive()) {
+#'   # TODO
+#' }
+get_scores_signature_genes <- function() {
+
+}
+
+
