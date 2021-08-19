@@ -10,7 +10,11 @@ get_opt_xtrain_stats()
 TODO
 }
 \description{
-Title
+Training set cancer-specifc features mean and standard deviation
+}
+\details{
+Cancer-specific features mean and standard deviation of the training set used during
+randomized cross-validation repeated 100 times. It is required for normalization of the test set.
 }
 \examples{
 if (interactive()) {

@@ -10,7 +10,11 @@ get_group_lrpairs()
 TODO
 }
 \description{
-Title
+Groups of ligand-receptor pairs
+}
+\details{
+Information to group ligand-receptor pairs because of sharing the same gene,
+either as ligand or receptor.
 }
 \examples{
 if (interactive()) {

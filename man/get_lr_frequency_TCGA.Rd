@@ -10,10 +10,15 @@ get_lr_frequency_TCGA()
 TODO
 }
 \description{
-Title
+Frequency of each ligand-receptor pair feature across the whole TCGA database
 }
 \examples{
 if (interactive()) {
   # TODO
 }
+}
+\references{
+The Cancer Genome Atlas Research Network., Weinstein, J., Collisson, E.
+et al. The Cancer Genome Atlas Pan-Cancer analysis project. Nat Genet 45, 1113–1120 (2013).
+https://doi.org/10.1038/ng.2764
 }

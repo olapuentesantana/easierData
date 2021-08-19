@@ -10,7 +10,12 @@ get_opt_models()
 TODO
 }
 \description{
-Title
+Cancer-specifc model feature parameters
+}
+\details{
+Cancer-specifc model feature parameters learned, for each quantitative descriptor
+during training using multi-task learning with randomized cross-validation repeated 100 times.
+For each quantitative descriptor, 1000 models are available (100 per task).
 }
 \examples{
 if (interactive()) {

@@ -7,13 +7,23 @@
 get_cor_scores_genes()
 }
 \value{
-TODO
+A character vector TODO
 }
 \description{
-Title
+Genes used to define correlated scores of immune response
 }
 \examples{
 if (interactive()) {
   # TODO
 }
+}
+\references{
+Lapuente-Santana, Óscar, Maisa van Genderen, Peter A. J. Hilbers,
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
+Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
+https://doi.org/10.1016/j.patter.2021.100293.
+
+Mariathasan, S., Turley, S., Nickles, D. et al. TGFβ attenuates
+tumour response to PD-L1 blockade by contributing to exclusion of T cells.
+Nature 554, 544–548 (2018). https://doi.org/10.1038/nature25501.
 }
