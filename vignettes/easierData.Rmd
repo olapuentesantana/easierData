@@ -68,7 +68,7 @@ instance to access the Mariathasan2018_PDL1_treatment example dataset:
 mariathasan_dataset <- eh[["EH6677"]]
 mariathasan_dataset
 
-mariathasan_dataset <- Mariathasan2018_PDL1_treatment()
+mariathasan_dataset <- get_Mariathasan2018_PDL1_treatment()
 mariathasan_dataset
 ```
 # Session info
