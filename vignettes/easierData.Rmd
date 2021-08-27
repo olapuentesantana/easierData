@@ -25,7 +25,7 @@ The `easierData` data package includes an exemplary dataset to showcase the `eas
   
 The `easierData` data package also includes multiple data objects so-called internal data of `easier` package since they are indispensable for the functional performance of the package. This includes:
 
-- **opt_models**: cancer-specifc model feature parameters learned, for each quantitative descriptor during training using multi-task learning with randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models are available (100 per task).
+- **opt_models**: cancer-specific model feature parameters learned, for each quantitative descriptor during training using multi-task learning with randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models are available (100 per task).
     
 - **opt_xtrain_stats**: cancer-specific features mean and standard deviation of the training set used during
       randomized cross-validation repeated 100 times. It is required for normalization of the test set.
@@ -48,7 +48,8 @@ The `easierData` data package also includes multiple data objects so-called inte
     
 - **scores_signature_genes**: gene signatures for each score of immune response: CYT, TLS, IFNy, Ayers_expIS, Tcell_inflamed, Roh_IS, Davoli_IS, chemokines, IMPRES, MSI and RIR.
 
-The contents of the package can be seen by querying annotationHub for the package name:
+The contents of the package can be seen by querying ExperimentHub for the package name:
+
 ```{r}
 suppressPackageStartupMessages({
     library(ExperimentHub)
@@ -60,9 +61,15 @@ eh <- ExperimentHub()
 query(eh, "easierData")
 ```
 
-The individual data objects can be accessed using either their ExperimentHub
-accession number, or the convenience functions provided in this package. For
-instance to access the Mariathasan2018_PDL1_treatment example dataset:
+An overview is provided also in tabular form:
+
+```{r}
+list_easierData()
+```
+
+
+The individual data objects can be accessed using either their ExperimentHub accession number, or the convenience functions provided in this package - both calls are equivalent.
+For instance to access the `Mariathasan2018_PDL1_treatment` example dataset:
 
 ```{r, message=FALSE}
 mariathasan_dataset <- eh[["EH6677"]]
@@ -71,6 +78,7 @@ mariathasan_dataset
 mariathasan_dataset <- get_Mariathasan2018_PDL1_treatment()
 mariathasan_dataset
 ```
+
 # Session info
 
 ```{r sessionInfo}
