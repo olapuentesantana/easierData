@@ -37,7 +37,7 @@ list_easierData <- function() {
 #'
 #' @export
 #'
-#' @references Lapuente-Santana, Óscar, Maisa van Genderen, Peter A. J. Hilbers,
+#' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
 #' Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
 #' Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
 #' https://doi.org/10.1016/j.patter.2021.100293.
@@ -63,14 +63,19 @@ get_Mariathasan2018_PDL1_treatment <- function() {
 
 #' Title
 #'
-#' Cancer-specifc model feature parameters
+#' Cancer-specific model feature parameters
 #'
-#' Cancer-specifc model feature parameters learned, for each quantitative descriptor
+#' Cancer-specific model feature parameters learned, for each quantitative descriptor
 #' during training using multi-task learning with randomized cross-validation repeated 100 times.
 #' For each quantitative descriptor, 1000 models are available (100 per task).
 #'
 #' @return TODO
 #' @export
+#'
+#' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
+#' Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
+#' Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
+#' https://doi.org/10.1016/j.patter.2021.100293.
 #'
 #' @examples
 #' if (interactive()) {
@@ -83,13 +88,18 @@ get_opt_models <- function() {
 
 #' Title
 #'
-#' Training set cancer-specifc features mean and standard deviation
+#' Training set cancer-specific features mean and standard deviation
 #'
 #' Cancer-specific features mean and standard deviation of the training set used during
 #' randomized cross-validation repeated 100 times. It is required for normalization of the test set.
 #'
 #' @return TODO
 #' @export
+#'
+#' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
+#' Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
+#' Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
+#' https://doi.org/10.1016/j.patter.2021.100293.
 #'
 #' @examples
 #' if (interactive()) {
@@ -153,7 +163,7 @@ get_TCGA_sd_pancancer <- function() {
 #' @return A character vector TODO
 #' @export
 #'
-#' @references Lapuente-Santana, Óscar, Maisa van Genderen, Peter A. J. Hilbers,
+#' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
 #' Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
 #' Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
 #' https://doi.org/10.1016/j.patter.2021.100293.
@@ -313,10 +323,10 @@ get_HGNC_annotation <- function() {
 #' Leeso, et al. 2018. “A Cancer Cell Program Promotes t Cell Exclusion and Resistance to Checkpoint Blockade.”
 #' Cell 175 (4): 984–997.e24. https://doi.org/10.1016/j.cell.2018.09.006.
 #'
-#' @references Lapuente-Santana, Óscar, Maisa van Genderen, Peter A. J. Hilbers, Francesca Finotello, and Federica Eduati.
+#' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers, Francesca Finotello, and Federica Eduati.
 #' 2021. “Interpretable Systems Biomarkers Predict Response to Immune-Checkpoint Inhibitors.” Patterns, 100293.
 #' https://doi.org/10.1016/j.patter.2021.100293.
-
+#'
 #' @return TODO
 #' @export
 #'
