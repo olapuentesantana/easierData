@@ -62,7 +62,7 @@ Jerby-Arnon, Livnat, Parin Shah, Michael S. Cuoco, Christopher Rodman, Mei-Ju Su
 Leeso, et al. 2018. “A Cancer Cell Program Promotes t Cell Exclusion and Resistance to Checkpoint Blockade.”
 Cell 175 (4): 984–997.e24. https://doi.org/10.1016/j.cell.2018.09.006.
 
-Lapuente-Santana, Óscar, Maisa van Genderen, Peter A. J. Hilbers, Francesca Finotello, and Federica Eduati.
+Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers, Francesca Finotello, and Federica Eduati.
 2021. “Interpretable Systems Biomarkers Predict Response to Immune-Checkpoint Inhibitors.” Patterns, 100293.
 https://doi.org/10.1016/j.patter.2021.100293.
 }

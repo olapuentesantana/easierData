@@ -5,7 +5,7 @@
 \alias{easierData-pkg}
 \title{easierData}
 \description{
-This experimentHub package provides access to an exemplary bladder cancer dataset
+This ExperimentHub package provides access to an exemplary bladder cancer dataset
 with both processed RNA-seq data and information on response to ICB therapy
 publicly available via IMvigor210CoreBiologies package, and to internal data
 indispensable for the functional performance of easier package.

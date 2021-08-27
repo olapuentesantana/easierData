@@ -10,7 +10,7 @@ get_opt_xtrain_stats()
 TODO
 }
 \description{
-Training set cancer-specifc features mean and standard deviation
+Training set cancer-specific features mean and standard deviation
 }
 \details{
 Cancer-specific features mean and standard deviation of the training set used during
@@ -20,4 +20,10 @@ randomized cross-validation repeated 100 times. It is required for normalization
 if (interactive()) {
   # TODO
 }
+}
+\references{
+Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
+Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
+https://doi.org/10.1016/j.patter.2021.100293.
 }

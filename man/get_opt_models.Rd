@@ -10,10 +10,10 @@ get_opt_models()
 TODO
 }
 \description{
-Cancer-specifc model feature parameters
+Cancer-specific model feature parameters
 }
 \details{
-Cancer-specifc model feature parameters learned, for each quantitative descriptor
+Cancer-specific model feature parameters learned, for each quantitative descriptor
 during training using multi-task learning with randomized cross-validation repeated 100 times.
 For each quantitative descriptor, 1000 models are available (100 per task).
 }
@@ -21,4 +21,10 @@ For each quantitative descriptor, 1000 models are available (100 per task).
 if (interactive()) {
   # TODO
 }
+}
+\references{
+Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
+Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
+https://doi.org/10.1016/j.patter.2021.100293.
 }
