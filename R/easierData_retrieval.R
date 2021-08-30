@@ -23,9 +23,11 @@ list_easierData <- function() {
 }
 
 
-#' Get the Mariathasan2018 PDL1 treatment data
+#' Get the Mariathasan2018 PD-L1 treatment data
 #'
-#' Obtain the ...TODO... from Mariathasan et al. (2018)
+#' Obtain the gene expression data (count and tpm values) and the sample metadata
+#' (patient id, best overall response to PD-L1 treatment and tumor mutational burden)
+#' from Mariathasan et al. (2018)
 #'
 #' The `SummarizedExperiment` object returned contains
 #' - two assays: `counts` and `tpm`
@@ -61,15 +63,16 @@ get_Mariathasan2018_PDL1_treatment <- function() {
 }
 
 
-#' Title
+#' Get the cancer-specific model feature parameters
 #'
-#' Cancer-specific model feature parameters
+#' Obtain the cancer-specific model feature parameters learned in Lapuente-Santana et al. (2021).
+#' For each quantitative descriptor, models were trained using multi-task learning with
+#' randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models
+#' are available (100 per task).
 #'
-#' Cancer-specific model feature parameters learned, for each quantitative descriptor
-#' during training using multi-task learning with randomized cross-validation repeated 100 times.
-#' For each quantitative descriptor, 1000 models are available (100 per task).
+#' @return A \code{list} object containing for each cancer type and quantitative descriptor, a
+#' matrix of feature coefficient values across different tasks.
 #'
-#' @return TODO
 #' @export
 #'
 #' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
@@ -79,21 +82,25 @@ get_Mariathasan2018_PDL1_treatment <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   opt_models <- get_opt_models()
 #' }
 get_opt_models <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving cancer-specific feature models...")
+  ehub_data <- eh[["EH6678"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get training set cancer-specific features mean and standard deviation
 #'
-#' Training set cancer-specific features mean and standard deviation
+#' Obtain the cancer-specific features mean and standard deviation of the training set
+#' used in Lapuente-Santana et al. (2021) for model training using randomized cross-validation
+#' repeated 100 times. It is required for normalization of the test set.
 #'
-#' Cancer-specific features mean and standard deviation of the training set used during
-#' randomized cross-validation repeated 100 times. It is required for normalization of the test set.
+#' @return A \code{list} object containing for each cancer type and quantitative descriptor, a
+#' matrix with feature mean and sd values across the 100 cross-validation runs.
 #'
-#' @return TODO
 #' @export
 #'
 #' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
@@ -103,21 +110,23 @@ get_opt_models <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   opt_xtrain_stats <- get_opt_xtrain_stats()
 #' }
 get_opt_xtrain_stats <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving training set cancer-specifc features mean and standard deviation...")
+  ehub_data <- eh[["EH6679"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the mean of the TPM expression of each gene across all TCGA cancer types
 #'
-#' Mean of the TPM expression of each gene across all TCGA cancer types
-#'
-#' Mean of the TPM expression of each gene across all TCGA cancer types.
+#' Obtain the mean of the TPM expression of each gene across all TCGA cancer types.
 #' It is required for normalization of input TPM gene expression data.
 #'
-#' @return TODO
+#' @return A \code{numeric} vector with gene TPM mean values.
+#'
 #' @export
 #'
 #' @references The Cancer Genome Atlas Research Network., Weinstein, J., Collisson, E.
@@ -126,21 +135,23 @@ get_opt_xtrain_stats <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   TCGA_mean_pancancer <- get_TCGA_mean_pancancer()
 #' }
 get_TCGA_mean_pancancer <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving mean of the TPM expression of each gene across all TCGA cancer types...")
+  ehub_data <- eh[["EH6680"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the standard deviation of the TPM expression of each gene across all TCGA cancer types
 #'
-#' Standard deviation of the TPM expression of each gene across all TCGA cancer types
-#'
-#' Standard deviation of the TPM expression of each gene across all TCGA cancer types.
+#' Obtain the standard deviation (sd) of the TPM expression of each gene across all TCGA cancer types.
 #' It is required for normalization of input TPM gene expression data.
 #'
-#' @return TODO
+#' @return A \code{numeric} vector with gene TPM sd values.
+#'
 #' @export
 #'
 #' @references The Cancer Genome Atlas Research Network., Weinstein, J., Collisson, E.
@@ -149,18 +160,23 @@ get_TCGA_mean_pancancer <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   TCGA_sd_pancancer <- get_TCGA_sd_pancancer()
 #' }
 get_TCGA_sd_pancancer <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving standard deviation of the TPM expression of each gene across all TCGA cancer types...")
+  ehub_data <- eh[["EH6681"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the list of genes used to define correlated scores of immune response
 #'
-#' Genes used to define correlated scores of immune response
+#' Obtain the list of genes used to define each of the correlated scores of immune response.
+#' A subset of 10 scores was found to be highly correlated across all 18 cancer types.
 #'
-#' @return A character vector TODO
+#' @return A \code{character} vector with gene names.
+#'
 #' @export
 #'
 #' @references Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
@@ -174,18 +190,19 @@ get_TCGA_sd_pancancer <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   cor_scores_genes <- get_cor_scores_genes()
 #' }
 get_cor_scores_genes <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving list of genes used to define correlated scores of immune response...")
+  ehub_data <- eh[["EH6682"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the cancer-specific intercellular networks, including a pan-cancer network.
 #'
-#' Cancer-specific intercellular networks, including a pan-cancer network
-#'
-#' Cancer-specific intercellular networks based on literature supported pairs
+#' Obtain the cancer-specific intercellular networks based on literature supported pairs
 #' from the Ramilowski database (Ramilowski et al., Nat.Commun., 2015), filtering
 #' for 24 cell types acknowledged to be present in the TME.
 #' Additionally, a pan-cancer cell type is included using data from the CCLE
@@ -203,23 +220,32 @@ get_cor_scores_genes <- function() {
 #' Line Encyclopedia enables predictive modelling of anticancer drug sensitivity.
 #' Nature 483, 603–607 (2012). https://doi.org/10.1038/nature11003
 #'
-#' @return TODO
+#' @return A \code{list} object containing for each cancer type, a data.frame with cell-cell
+#' ligands and receptors information.
+#'
 #' @export
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   intercell_networks <- get_intercell_networks()
 #' }
 get_intercell_networks <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving cancer-specific intercellular networks, including a pan-cancer network...")
+  ehub_data <- eh[["EH6683"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the frequency of each ligand-receptor pair feature across the whole TCGA database
 #'
-#' Frequency of each ligand-receptor pair feature across the whole TCGA database
+#' Obtain the frequency of each ligand-receptor pair feature across the whole TCGA database.
+#' Only ligand-receptor pairs with frequency different from zero are kept. Each cell-cell pair
+#' feature score is calculated as the sum of the inverse of the frequency of all the active
+#' ligand-receptor pairs.
 #'
-#' @return TODO
+#' @return A \code{numeric} vector with the frequency of each ligand-receptor pair feature.
+#'
 #' @export
 #'
 #' @references The Cancer Genome Atlas Research Network., Weinstein, J., Collisson, E.
@@ -228,37 +254,41 @@ get_intercell_networks <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   lr_frequency <- get_lr_frequency_TCGA()
 #' }
 get_lr_frequency_TCGA <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving the frequency of each ligand-receptor pair feature across the whole TCGA database...")
+  ehub_data <- eh[["EH6684"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the groups of ligand-receptor pairs
 #'
-#' Groups of ligand-receptor pairs
-#'
-#' Information to group ligand-receptor pairs because of sharing the same gene,
+#' Obtain the information to group ligand-receptor pairs because of sharing the same gene,
 #' either as ligand or receptor.
 #'
-#' @return TODO
+#' @return A \code{list} object containing grouping information for 56 groups of ligand-receptor pairs.
+#'
 #' @export
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   group_lrpairs <- get_group_lrpairs()
 #' }
 get_group_lrpairs <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving groups of ligand-receptor pairs...")
+  ehub_data <- eh[["EH6685"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the gene symbols approved annotations.
 #'
-#' Gene symbols approved annotations.
+#' @return A \code{data.frame} object.
 #'
-#' @return TODO
 #' @export
 #'
 #' @references Tweedie S, Braschi B, Gray KA, Jones TEM, Seal RL, Yates B, Bruford EA.
@@ -269,19 +299,21 @@ get_group_lrpairs <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   HGNC <- get_HGNC_annotation()
 #' }
 get_HGNC_annotation <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving gene symbols approved annotations...")
+  ehub_data <- eh[["EH6686"]]
+  return(ehub_data)
 }
 
 
-#' Title
+#' Get the gene signatures for each score of immune response
 #'
-#' Gene signatures for each score of immune response
-#'
-#' Gene signatures for each score of immune response: CYT, TLS, IFNy, Ayers_expIS,
-#' Tcell_inflamed, Roh_IS, Davoli_IS, chemokines, IMPRES, MSI and RIR.
+#' Obtain the gene signatures for each score of immune response:
+#' CYT, TLS, IFNy, Ayers_expIS, Tcell_inflamed, Roh_IS, Davoli_IS,
+#' chemokines, IMPRES, MSI and RIR.
 #'
 #' @references Rooney, Michael S., Sachet A. Shukla, Catherine J. Wu, Gad Getz, and Nir Hacohen. 2015. “Molecular and Genetic
 #' Properties of Tumors Associated with Local Immune Cytolytic Activity.” Cell 160 (1): 48–61.
@@ -327,15 +359,19 @@ get_HGNC_annotation <- function() {
 #' 2021. “Interpretable Systems Biomarkers Predict Response to Immune-Checkpoint Inhibitors.” Patterns, 100293.
 #' https://doi.org/10.1016/j.patter.2021.100293.
 #'
-#' @return TODO
+#' @return A \code{list} object containing the signature genes for each score of immune response.
+#'
 #' @export
 #'
 #' @examples
 #' if (interactive()) {
-#'   # TODO
+#'   easier_sigs <- get_scores_signature_genes()
 #' }
 get_scores_signature_genes <- function() {
-
+  eh <- ExperimentHub::ExperimentHub()
+  message("Retrieving gene signatures for each score of immune response...")
+  ehub_data <- eh[["EH6687"]]
+  return(ehub_data)
 }
 
 
