@@ -1,10 +1,10 @@
 #' List the datasets
 #'
-#' List the datasets contained in the easierData package
+#' List the datasets contained in the easierData package.
 #'
 #' @importFrom AnnotationHub query
 #'
-#' @return A data.frame for a compact visualization
+#' @return A data.frame for a compact visualization.
 #'
 #' @export
 #'
@@ -27,12 +27,12 @@ list_easierData <- function() {
 #'
 #' Obtain the gene expression data (count and tpm values) and the sample metadata
 #' (patient id, best overall response to PD-L1 treatment and tumor mutational burden)
-#' from Mariathasan et al. (2018)
+#' from Mariathasan et al. (2018).
 #'
-#' The `SummarizedExperiment` object returned contains
-#' - two assays: `counts` and `tpm`
+#' The `SummarizedExperiment` object returned contains:
+#' - two assays: `counts` and `tpm`.
 #' - additional sample metadata in the `colData` slot, including  pat_id (the id
-#'   of the patient in the original study), BOR, and TMB (Tumor Mutational Burden)
+#'   of the patient in the original study), BOR, and TMB (Tumor Mutational Burden).
 #'
 #' @return A \linkS4class{SummarizedExperiment} object with counts and TPM
 #' quantifications.
@@ -70,7 +70,7 @@ get_Mariathasan2018_PDL1_treatment <- function() {
 #' randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models
 #' are available (100 per task).
 #'
-#' @return A \code{list} object containing for each cancer type and quantitative descriptor, a
+#' @return A list containing for each cancer type and quantitative descriptor, a
 #' matrix of feature coefficient values across different tasks.
 #'
 #' @export
@@ -98,7 +98,7 @@ get_opt_models <- function() {
 #' used in Lapuente-Santana et al. (2021) for model training using randomized cross-validation
 #' repeated 100 times. It is required for normalization of the test set.
 #'
-#' @return A \code{list} object containing for each cancer type and quantitative descriptor, a
+#' @return A list containing for each cancer type and quantitative descriptor, a
 #' matrix with feature mean and sd values across the 100 cross-validation runs.
 #'
 #' @export
@@ -125,7 +125,7 @@ get_opt_xtrain_stats <- function() {
 #' Obtain the mean of the TPM expression of each gene across all TCGA cancer types.
 #' It is required for normalization of input TPM gene expression data.
 #'
-#' @return A \code{numeric} vector with gene TPM mean values.
+#' @return A numeric vector with gene TPM mean values.
 #'
 #' @export
 #'
@@ -150,7 +150,7 @@ get_TCGA_mean_pancancer <- function() {
 #' Obtain the standard deviation (sd) of the TPM expression of each gene across all TCGA cancer types.
 #' It is required for normalization of input TPM gene expression data.
 #'
-#' @return A \code{numeric} vector with gene TPM sd values.
+#' @return A numeric vector with gene TPM sd values.
 #'
 #' @export
 #'
@@ -175,7 +175,7 @@ get_TCGA_sd_pancancer <- function() {
 #' Obtain the list of genes used to define each of the correlated scores of immune response.
 #' A subset of 10 scores was found to be highly correlated across all 18 cancer types.
 #'
-#' @return A \code{character} vector with gene names.
+#' @return A character vector with gene names.
 #'
 #' @export
 #'
@@ -200,7 +200,7 @@ get_cor_scores_genes <- function() {
 }
 
 
-#' Get the cancer-specific intercellular networks, including a pan-cancer network.
+#' Get the cancer-specific intercellular networks, including a pan-cancer network
 #'
 #' Obtain the cancer-specific intercellular networks based on literature supported pairs
 #' from the Ramilowski database (Ramilowski et al., Nat.Commun., 2015), filtering
@@ -220,7 +220,7 @@ get_cor_scores_genes <- function() {
 #' Line Encyclopedia enables predictive modelling of anticancer drug sensitivity.
 #' Nature 483, 603–607 (2012). https://doi.org/10.1038/nature11003
 #'
-#' @return A \code{list} object containing for each cancer type, a data.frame with cell-cell
+#' @return A list containing for each cancer type, a data.frame with cell-cell
 #' ligands and receptors information.
 #'
 #' @export
@@ -244,7 +244,7 @@ get_intercell_networks <- function() {
 #' feature score is calculated as the sum of the inverse of the frequency of all the active
 #' ligand-receptor pairs.
 #'
-#' @return A \code{numeric} vector with the frequency of each ligand-receptor pair feature.
+#' @return A numeric vector with the frequency of each ligand-receptor pair feature.
 #'
 #' @export
 #'
@@ -269,7 +269,7 @@ get_lr_frequency_TCGA <- function() {
 #' Obtain the information to group ligand-receptor pairs because of sharing the same gene,
 #' either as ligand or receptor.
 #'
-#' @return A \code{list} object containing grouping information for 56 groups of ligand-receptor pairs.
+#' @return A list containing grouping information for 56 groups of ligand-receptor pairs.
 #'
 #' @export
 #'
@@ -285,9 +285,9 @@ get_group_lrpairs <- function() {
 }
 
 
-#' Get the gene symbols approved annotations.
+#' Get the gene symbols approved annotations
 #'
-#' @return A \code{data.frame} object.
+#' @return A data.frame with gene symbols information.
 #'
 #' @export
 #'
@@ -359,7 +359,7 @@ get_HGNC_annotation <- function() {
 #' 2021. “Interpretable Systems Biomarkers Predict Response to Immune-Checkpoint Inhibitors.” Patterns, 100293.
 #' https://doi.org/10.1016/j.patter.2021.100293.
 #'
-#' @return A \code{list} object containing the signature genes for each score of immune response.
+#' @return A list with the gene signature of each score of immune response.
 #'
 #' @export
 #'
