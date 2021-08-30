@@ -26,13 +26,13 @@ list_easierData <- function() {
 #' Get the Mariathasan2018 PD-L1 treatment data
 #'
 #' Obtain the gene expression data (count and tpm values) and the sample metadata
-#' (patient id, best overall response to PD-L1 treatment and tumor mutational burden)
 #' from Mariathasan et al. (2018).
 #'
 #' The `SummarizedExperiment` object returned contains:
 #' - two assays: `counts` and `tpm`.
 #' - additional sample metadata in the `colData` slot, including  pat_id (the id
-#'   of the patient in the original study), BOR, and TMB (Tumor Mutational Burden).
+#'   of the patient in the original study), BOR to PD-L1 treatment, and TMB
+#'   (Tumor Mutational Burden).
 #'
 #' @return A \linkS4class{SummarizedExperiment} object with counts and TPM
 #' quantifications.
@@ -173,7 +173,7 @@ get_TCGA_sd_pancancer <- function() {
 #' Get the list of genes used to define correlated scores of immune response
 #'
 #' Obtain the list of genes used to define each of the correlated scores of immune response.
-#' A subset of 10 scores was found to be highly correlated across all 18 cancer types.
+#' These scores were found to be highly correlated across all 18 cancer types.
 #'
 #' @return A character vector with gene names.
 #'
