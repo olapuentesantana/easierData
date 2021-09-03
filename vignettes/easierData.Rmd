@@ -79,21 +79,20 @@ query(eh, "easierData")
 
 An overview is provided also in tabular form:
 
-# ```{r}
-# list_easierData()
-# ```
-
+```{r}
+list_easierData()
+```
 
 The individual data objects can be accessed using either their ExperimentHub accession number, or the convenience functions provided in this package - both calls are equivalent.
 For instance to access the `Mariathasan2018_PDL1_treatment` example dataset:
 
-# ```{r, message=FALSE}
-# mariathasan_dataset <- eh[["EH6677"]]
-# mariathasan_dataset
-# 
-# mariathasan_dataset <- get_Mariathasan2018_PDL1_treatment()
-# mariathasan_dataset
-# ```
+```{r, message=FALSE}
+mariathasan_dataset <- eh[["EH6677"]]
+mariathasan_dataset
+
+mariathasan_dataset <- get_Mariathasan2018_PDL1_treatment()
+mariathasan_dataset
+```
 
 # Session info
 
