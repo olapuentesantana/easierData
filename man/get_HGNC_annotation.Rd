@@ -2,7 +2,7 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_HGNC_annotation}
 \alias{get_HGNC_annotation}
-\title{Title}
+\title{Get the gene symbols approved annotations}
 \source{
 https://www.genenames.org/tools/multi-symbol-checker/
 }
@@ -10,14 +10,14 @@ https://www.genenames.org/tools/multi-symbol-checker/
 get_HGNC_annotation()
 }
 \value{
-TODO
+A data.frame with gene symbols information.
 }
 \description{
-Gene symbols approved annotations.
+Get the gene symbols approved annotations
 }
 \examples{
 if (interactive()) {
-  # TODO
+  HGNC <- get_HGNC_annotation()
 }
 }
 \references{

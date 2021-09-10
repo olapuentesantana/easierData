@@ -2,19 +2,22 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_lr_frequency_TCGA}
 \alias{get_lr_frequency_TCGA}
-\title{Title}
+\title{Get the frequency of each ligand-receptor pair feature across the whole TCGA database}
 \usage{
 get_lr_frequency_TCGA()
 }
 \value{
-TODO
+A numeric vector with the frequency of each ligand-receptor pair feature.
 }
 \description{
-Frequency of each ligand-receptor pair feature across the whole TCGA database
+Obtain the frequency of each ligand-receptor pair feature across the whole TCGA database.
+Only ligand-receptor pairs with frequency different from zero are kept. Each cell-cell pair
+feature score is calculated as the sum of the inverse of the frequency of all the active
+ligand-receptor pairs.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  lr_frequency <- get_lr_frequency_TCGA()
 }
 }
 \references{

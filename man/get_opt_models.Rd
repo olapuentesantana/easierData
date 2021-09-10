@@ -2,24 +2,23 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_opt_models}
 \alias{get_opt_models}
-\title{Title}
+\title{Get the cancer-specific model feature parameters}
 \usage{
 get_opt_models()
 }
 \value{
-TODO
+A list containing for each cancer type and quantitative descriptor, a
+matrix of feature coefficient values across different tasks.
 }
 \description{
-Cancer-specific model feature parameters
-}
-\details{
-Cancer-specific model feature parameters learned, for each quantitative descriptor
-during training using multi-task learning with randomized cross-validation repeated 100 times.
-For each quantitative descriptor, 1000 models are available (100 per task).
+Obtain the cancer-specific model feature parameters learned in Lapuente-Santana et al. (2021).
+For each quantitative descriptor, models were trained using multi-task learning with
+randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models
+are available (100 per task).
 }
 \examples{
 if (interactive()) {
-  # TODO
+  opt_models <- get_opt_models()
 }
 }
 \references{

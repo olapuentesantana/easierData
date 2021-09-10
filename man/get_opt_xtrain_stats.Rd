@@ -2,23 +2,22 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_opt_xtrain_stats}
 \alias{get_opt_xtrain_stats}
-\title{Title}
+\title{Get training set cancer-specific features mean and standard deviation}
 \usage{
 get_opt_xtrain_stats()
 }
 \value{
-TODO
+A list containing for each cancer type and quantitative descriptor, a
+matrix with feature mean and sd values across the 100 cross-validation runs.
 }
 \description{
-Training set cancer-specific features mean and standard deviation
-}
-\details{
-Cancer-specific features mean and standard deviation of the training set used during
-randomized cross-validation repeated 100 times. It is required for normalization of the test set.
+Obtain the cancer-specific features mean and standard deviation of the training set
+used in Lapuente-Santana et al. (2021) for model training using randomized cross-validation
+repeated 100 times. It is required for normalization of the test set.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  opt_xtrain_stats <- get_opt_xtrain_stats()
 }
 }
 \references{

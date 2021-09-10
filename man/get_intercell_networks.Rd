@@ -2,18 +2,16 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_intercell_networks}
 \alias{get_intercell_networks}
-\title{Title}
+\title{Get the cancer-specific intercellular networks, including a pan-cancer network}
 \usage{
 get_intercell_networks()
 }
 \value{
-TODO
+A list containing for each cancer type, a data.frame with cell-cell
+ligands and receptors information.
 }
 \description{
-Cancer-specific intercellular networks, including a pan-cancer network
-}
-\details{
-Cancer-specific intercellular networks based on literature supported pairs
+Obtain the cancer-specific intercellular networks based on literature supported pairs
 from the Ramilowski database (Ramilowski et al., Nat.Commun., 2015), filtering
 for 24 cell types acknowledged to be present in the TME.
 Additionally, a pan-cancer cell type is included using data from the CCLE
@@ -24,7 +22,7 @@ ligand-receptor pairs present across the cancer-specific networks.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  intercell_networks <- get_intercell_networks()
 }
 }
 \references{

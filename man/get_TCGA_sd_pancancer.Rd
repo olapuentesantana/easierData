@@ -2,23 +2,20 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_TCGA_sd_pancancer}
 \alias{get_TCGA_sd_pancancer}
-\title{Title}
+\title{Get the standard deviation of the TPM expression of each gene across all TCGA cancer types}
 \usage{
 get_TCGA_sd_pancancer()
 }
 \value{
-TODO
+A numeric vector with gene TPM sd values.
 }
 \description{
-Standard deviation of the TPM expression of each gene across all TCGA cancer types
-}
-\details{
-Standard deviation of the TPM expression of each gene across all TCGA cancer types.
+Obtain the standard deviation (sd) of the TPM expression of each gene across all TCGA cancer types.
 It is required for normalization of input TPM gene expression data.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  TCGA_sd_pancancer <- get_TCGA_sd_pancancer()
 }
 }
 \references{

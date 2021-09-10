@@ -2,19 +2,20 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_cor_scores_genes}
 \alias{get_cor_scores_genes}
-\title{Title}
+\title{Get the list of genes used to define correlated scores of immune response}
 \usage{
 get_cor_scores_genes()
 }
 \value{
-A character vector TODO
+A character vector with gene names.
 }
 \description{
-Genes used to define correlated scores of immune response
+Obtain the list of genes used to define each of the correlated scores of immune response.
+These scores were found to be highly correlated across all 18 cancer types.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  cor_scores_genes <- get_cor_scores_genes()
 }
 }
 \references{

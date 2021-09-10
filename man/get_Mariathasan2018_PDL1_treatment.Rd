@@ -2,7 +2,7 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_Mariathasan2018_PDL1_treatment}
 \alias{get_Mariathasan2018_PDL1_treatment}
-\title{Get the Mariathasan2018 PDL1 treatment data}
+\title{Get the Mariathasan2018 PD-L1 treatment data}
 \source{
 IMvigor210CoreBiologies package:
 http://research-pub.gene.com/IMvigor210CoreBiologies/ under the CC-BY license.
@@ -15,14 +15,16 @@ A \linkS4class{SummarizedExperiment} object with counts and TPM
 quantifications.
 }
 \description{
-Obtain the ...TODO... from Mariathasan et al. (2018)
+Obtain the gene expression data (count and tpm values) and the sample metadata
+from Mariathasan et al. (2018).
 }
 \details{
-The \code{SummarizedExperiment} object returned contains
+The \code{SummarizedExperiment} object returned contains:
 \itemize{
-\item two assays: \code{counts} and \code{tpm}
+\item two assays: \code{counts} and \code{tpm}.
 \item additional sample metadata in the \code{colData} slot, including  pat_id (the id
-of the patient in the original study), BOR, and TMB (Tumor Mutational Burden)
+of the patient in the original study), BOR to PD-L1 treatment, and TMB
+(Tumor Mutational Burden).
 }
 }
 \examples{

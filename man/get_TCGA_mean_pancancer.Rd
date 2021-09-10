@@ -2,23 +2,20 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_TCGA_mean_pancancer}
 \alias{get_TCGA_mean_pancancer}
-\title{Title}
+\title{Get the mean of the TPM expression of each gene across all TCGA cancer types}
 \usage{
 get_TCGA_mean_pancancer()
 }
 \value{
-TODO
+A numeric vector with gene TPM mean values.
 }
 \description{
-Mean of the TPM expression of each gene across all TCGA cancer types
-}
-\details{
-Mean of the TPM expression of each gene across all TCGA cancer types.
+Obtain the mean of the TPM expression of each gene across all TCGA cancer types.
 It is required for normalization of input TPM gene expression data.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  TCGA_mean_pancancer <- get_TCGA_mean_pancancer()
 }
 }
 \references{

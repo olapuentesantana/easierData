@@ -2,22 +2,19 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_group_lrpairs}
 \alias{get_group_lrpairs}
-\title{Title}
+\title{Get the groups of ligand-receptor pairs}
 \usage{
 get_group_lrpairs()
 }
 \value{
-TODO
+A list containing grouping information for 56 groups of ligand-receptor pairs.
 }
 \description{
-Groups of ligand-receptor pairs
-}
-\details{
-Information to group ligand-receptor pairs because of sharing the same gene,
+Obtain the information to group ligand-receptor pairs because of sharing the same gene,
 either as ligand or receptor.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  group_lrpairs <- get_group_lrpairs()
 }
 }

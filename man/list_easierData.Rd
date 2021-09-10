@@ -7,10 +7,10 @@
 list_easierData()
 }
 \value{
-A data.frame for a compact visualization
+A data.frame for a compact visualization.
 }
 \description{
-List the datasets contained in the easierData package
+List the datasets contained in the easierData package.
 }
 \examples{
 df <- list_easierData()

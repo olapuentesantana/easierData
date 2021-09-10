@@ -1,21 +1,27 @@
 ---
 title: "easier Data"
 author:
-- name: Óscar Lapuente-Santana^[o.lapuente.santana@tue.nl]
-  affiliation: Computational Biology group, Department of Biomedical Engineering, Eindhoven University of Technology ([BME, TU/e](https://www.tue.nl/en/research/research-groups/computational-biology/))
-- name: Federico Marini^[marinif@uni-mainz.de]
-  affiliation: Institute of Medical Biostatistics, Epidemiology and Informatics ([IMBEI, Mainz](https://www.unimedizin-mainz.de/imbei/imbei/welcome-page.html?L=1))
-- name: Arsenij Ustjanzew^[arsenij.ustjanzew@uni-mainz.de]
-  affiliation: Institute of Medical Biostatistics, Epidemiology and Informatics ([IMBEI, Mainz](https://www.unimedizin-mainz.de/imbei/imbei/welcome-page.html?L=1))
-- name: Francesca Finotello^[francesca.finotello@i-med.ac.at]
-  affiliation: Institute of Bioinformatics, Biocenter Medical University of Innsbruck (https://icbi.i-med.ac.at/index.html)
-- name: Federica Eduati^[f.eduati@tue.nl]
-  affiliation: Computational Biology group, Department of Biomedical Engineering, Eindhoven University of Technology ([BME, TU/e](https://www.tue.nl/en/research/research-groups/computational-biology/))<br/>
-               Institute for Complex Molecular Systems, Eindhoven University of Technology ([ICMS, TU/e](https://www.tue.nl/en/research/institutes/institute-for-complex-molecular-systems/))
+- name: Óscar Lapuente-Santana
+  affiliation: Computational Biology group, Department of Biomedical Engineering, Eindhoven University of Technology (BME, TU/e)
+  email: o.lapuente.santana@tue.nl
+- name: Federico Marini
+  affiliation: Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI, Mainz)
+  email: marinif@uni-mainz.de
+- name: Arsenij Ustjanzew
+  affiliation: Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI, Mainz)
+  email: arsenij.ustjanzew@uni-mainz.de
+- name: Francesca Finotello
+  affiliation: Institute of Bioinformatics, Biocenter Medical University of Innsbruck
+  email: francesca.finotello@i-med.ac.at
+- name: Federica Eduati
+  affiliation: 
+  - Computational Biology group, Department of Biomedical Engineering, Eindhoven University of Technology (BME, TU/e)
+  - Institute for Complex Molecular Systems, Eindhoven University of Technology (ICMS, TU/e)
+  email: f.eduati@tue.nl
 date: "`r Sys.Date()`"
 package: easierData
 output: 
-    rmarkdown::html_document
+    BiocStyle::html_document
 bibliography: references_easierData.bib
 vignette: >
     %\VignetteIndexEntry{easier data}
@@ -23,14 +29,18 @@ vignette: >
     %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-# Load easier Data
+```{r setup, include=FALSE}
+library("easierData")
+```
+
+# Intro to `easierData`
 
 The `easierData` package includes an exemplary cancer dataset from @Mariathasan2018 to showcase the `easier` package:
 
@@ -64,14 +74,21 @@ The `easierData` data package also includes multiple data objects so-called inte
 * **scores_signature_genes**: a list with the gene signatures for each score of immune response: CYT [@ROONEY201548], TLS [@Cabrita2020], IFNy [@Ayers2017], Ayers_expIS [@Ayers2017], 
 Tcell_inflamed [@Ayers2017], Roh_IS [@Roheaah3560], Davoli_IS [@Davolieaaf8399], chemokines [@Messina2012], IMPRES [@Auslander2018], MSI [@Fu2019] and RIR [@JERBYARNON2018984].
 
+# Load easier Data
+
+Starting R, this package can be installed as follows:
+
+```{r, eval=TRUE}
+install.packages("../easierData_0.9.0.tar.gz", repos = NULL, type="source")
+```
+
 The contents of the package can be seen by querying ExperimentHub for the package name:
 
 ```{r}
 suppressPackageStartupMessages({
     library(ExperimentHub)
-    library(easierData)
+    library("easierData")
 })
-
 
 eh <- ExperimentHub()
 query(eh, "easierData")
@@ -99,3 +116,5 @@ mariathasan_dataset
 ```{r sessionInfo}
 sessionInfo()
 ```
+
+# References

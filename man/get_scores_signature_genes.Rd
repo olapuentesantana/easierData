@@ -2,23 +2,21 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_scores_signature_genes}
 \alias{get_scores_signature_genes}
-\title{Title}
+\title{Get the gene signatures for each score of immune response}
 \usage{
 get_scores_signature_genes()
 }
 \value{
-TODO
+A list with the gene signature of each score of immune response.
 }
 \description{
-Gene signatures for each score of immune response
-}
-\details{
-Gene signatures for each score of immune response: CYT, TLS, IFNy, Ayers_expIS,
-Tcell_inflamed, Roh_IS, Davoli_IS, chemokines, IMPRES, MSI and RIR.
+Obtain the gene signatures for each score of immune response:
+CYT, TLS, IFNy, Ayers_expIS, Tcell_inflamed, Roh_IS, Davoli_IS,
+chemokines, IMPRES, MSI and RIR.
 }
 \examples{
 if (interactive()) {
-  # TODO
+  easier_sigs <- get_scores_signature_genes()
 }
 }
 \references{
