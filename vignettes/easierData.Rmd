@@ -111,10 +111,9 @@ mariathasan_dataset <- get_Mariathasan2018_PDL1_treatment()
 mariathasan_dataset
 ```
 
-# Session info
+# Session info {-}
 
 ```{r sessionInfo}
 sessionInfo()
 ```
 
-# References
