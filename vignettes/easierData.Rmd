@@ -78,15 +78,15 @@ Tcell_inflamed [@Ayers2017], Roh_IS [@Roheaah3560], Davoli_IS [@Davolieaaf8399],
 
 Starting R, this package can be installed as follows:
 
-```{r, eval=TRUE}
-install.packages("../easierData_0.9.0.tar.gz", repos = NULL, type="source")
+```{r, eval=FALSE}
+BiocManager::install("easierData")
 ```
 
 The contents of the package can be seen by querying ExperimentHub for the package name:
 
 ```{r}
 suppressPackageStartupMessages({
-    library(ExperimentHub)
+    library("ExperimentHub")
     library("easierData")
 })
 
@@ -111,10 +111,10 @@ mariathasan_dataset <- get_Mariathasan2018_PDL1_treatment()
 mariathasan_dataset
 ```
 
-# Session info
+# Session info {-}
 
 ```{r sessionInfo}
 sessionInfo()
 ```
 
-# References
+# References {-}

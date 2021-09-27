@@ -10,6 +10,9 @@
 #' Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
 #' https://doi.org/10.1016/j.patter.2021.100293.
 #'
+#' @importFrom utils data
+#' @importFrom SummarizedExperiment SummarizedExperiment
+#'
 #' @name easierData-pkg
 #' @docType package
 NULL
