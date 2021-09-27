@@ -3,6 +3,7 @@
 #' List the datasets contained in the easierData package.
 #'
 #' @importFrom AnnotationHub query
+#' @importFrom ExperimentHub ExperimentHub
 #'
 #' @return A data.frame for a compact visualization.
 #'

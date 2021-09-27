@@ -1,7 +1,7 @@
 Package: easierData
 Type: Package
 Title: easier internal data and exemplary dataset from IMvigor210CoreBiologies package
-Version: 0.9.0
+Version: 0.99.0
 Authors@R: 
     c(
         person(
@@ -34,7 +34,6 @@ Description: Access to internal data required for the functional performance of 
     the CC-BY license. 
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 biocViews:
     RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData
 Depends: R (>= 4.1.0)
@@ -49,6 +48,6 @@ Suggests:
     BiocStyle,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
