@@ -2,23 +2,26 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_intercell_networks}
 \alias{get_intercell_networks}
-\title{Get the cancer-specific intercellular networks, including a pan-cancer network}
+\title{Get the cancer-specific intercellular networks, including a
+pan-cancer network}
 \usage{
 get_intercell_networks()
 }
 \value{
-A list containing for each cancer type, a data.frame with cell-cell
-ligands and receptors information.
+A list containing for each cancer type, a data.frame with
+cell-cell ligands and receptors information.
 }
 \description{
-Obtain the cancer-specific intercellular networks based on literature supported pairs
-from the Ramilowski database (Ramilowski et al., Nat.Commun., 2015), filtering
-for 24 cell types acknowledged to be present in the TME.
-Additionally, a pan-cancer cell type is included using data from the CCLE
-(Barretina et al., Nature, 2012) by computing the median expression of each
-gene across cell lines related to the selected cancer types.
-A pan-cancer network is also available and this is based on the union of all
-ligand-receptor pairs present across the cancer-specific networks.
+Obtain the cancer-specific intercellular networks based on
+literature supported pairs from the Ramilowski database
+(Ramilowski et al., Nat.Commun., 2015), filtering for 24 cell
+types acknowledged to be present in the TME. Additionally, a
+pan-cancer cell type is included using data from the CCLE
+(Barretina et al., Nature, 2012) by computing the median
+expression of each gene across cell lines related to the selected
+cancer types. A pan-cancer network is also available and this is
+based on the union of all ligand-receptor pairs present across
+the cancer-specific networks.
 }
 \examples{
 if (interactive()) {
@@ -27,11 +30,12 @@ if (interactive()) {
 }
 \references{
 Ramilowski, Jordan A., Tatyana Goldberg, Jayson Harshbarger,
-Edda Kloppmann, Marina Lizio, Venkata P. Satagopam, Masayoshi Itoh, et al. 2015.
-“A Draft Network of Ligand–Receptor-Mediated Multicellular Signalling in Human.”
-Nature Communications 6 (1): 7866. https://doi.org/10.1038/ncomms8866.
+Edda Kloppmann, Marina Lizio, Venkata P. Satagopam, Masayoshi Itoh,
+et al. 2015. “A Draft Network of Ligand–Receptor-Mediated Multicellular
+Signalling in Human.” Nature Communications 6 (1): 7866.
+https://doi.org/10.1038/ncomms8866.
 
-Barretina, J., Caponigro, G., Stransky, N. et al. The Cancer Cell
-Line Encyclopedia enables predictive modelling of anticancer drug sensitivity.
-Nature 483, 603–607 (2012). https://doi.org/10.1038/nature11003
+Barretina, J., Caponigro, G., Stransky, N. et al. The Cancer
+Cell Line Encyclopedia enables predictive modelling of anticancer drug
+sensitivity. Nature 483, 603–607 (2012). https://doi.org/10.1038/nature11003
 }

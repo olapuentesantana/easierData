@@ -11,9 +11,10 @@ A list containing for each cancer type and quantitative descriptor, a
 matrix with feature mean and sd values across the 100 cross-validation runs.
 }
 \description{
-Obtain the cancer-specific features mean and standard deviation of the training set
-used in Lapuente-Santana et al. (2021) for model training using randomized cross-validation
-repeated 100 times. It is required for normalization of the test set.
+Obtain the cancer-specific features mean and standard deviation of
+the training set used in Lapuente-Santana et al. (2021) for model training
+by  using randomized cross-validation repeated 100 times. It is required
+for normalization of the test set.
 }
 \examples{
 if (interactive()) {
@@ -22,7 +23,7 @@ if (interactive()) {
 }
 \references{
 Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
-Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
-Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
-https://doi.org/10.1016/j.patter.2021.100293.
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems
+Biomarkers Predict Response to Immune-Checkpoint Inhibitors.
+Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
 }

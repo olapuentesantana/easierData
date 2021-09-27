@@ -4,8 +4,8 @@
 \alias{get_Mariathasan2018_PDL1_treatment}
 \title{Get the Mariathasan2018 PD-L1 treatment data}
 \source{
-IMvigor210CoreBiologies package:
-http://research-pub.gene.com/IMvigor210CoreBiologies/ under the CC-BY license.
+IMvigor210CoreBiologies package under the CC-BY license.
+http://research-pub.gene.com/IMvigor210CoreBiologies/
 }
 \usage{
 get_Mariathasan2018_PDL1_treatment()
@@ -15,8 +15,8 @@ A \linkS4class{SummarizedExperiment} object with counts and TPM
 quantifications.
 }
 \description{
-Obtain the gene expression data (count and tpm values) and the sample metadata
-from Mariathasan et al. (2018).
+Obtain the gene expression data (count and tpm values)
+and the sample metadata from Mariathasan et al. (2018).
 }
 \details{
 The \code{SummarizedExperiment} object returned contains:
@@ -34,9 +34,9 @@ if (interactive()) {
 }
 \references{
 Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
-Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
-Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
-https://doi.org/10.1016/j.patter.2021.100293.
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems
+Biomarkers Predict Response to Immune-Checkpoint Inhibitors.
+Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
 
 Mariathasan, S., Turley, S., Nickles, D. et al. TGFβ attenuates
 tumour response to PD-L1 blockade by contributing to exclusion of T cells.

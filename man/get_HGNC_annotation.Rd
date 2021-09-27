@@ -21,7 +21,8 @@ if (interactive()) {
 }
 }
 \references{
-Tweedie S, Braschi B, Gray KA, Jones TEM, Seal RL, Yates B, Bruford EA.
-Genenames.org: the HGNC and VGNC resources in 2021. Nucleic Acids Res.
-PMID: 33152070 PMCID: PMC7779007 DOI: 10.1093/nar/gkaa980
+Tweedie S, Braschi B, Gray KA, Jones TEM, Seal RL, Yates B,
+Bruford EA. Genenames.org: the HGNC and VGNC resources in 2021.
+Nucleic Acids Res. PMID: 33152070 PMCID: PMC7779007
+DOI: 10.1093/nar/gkaa980
 }

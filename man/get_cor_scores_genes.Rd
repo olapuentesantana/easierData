@@ -10,8 +10,9 @@ get_cor_scores_genes()
 A character vector with gene names.
 }
 \description{
-Obtain the list of genes used to define each of the correlated scores of immune response.
-These scores were found to be highly correlated across all 18 cancer types.
+Obtain the list of genes used to define each of the correlated scores of
+immune response. These scores were found to be highly correlated across
+all 18 cancer types.
 }
 \examples{
 if (interactive()) {
@@ -20,9 +21,9 @@ if (interactive()) {
 }
 \references{
 Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
-Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
-Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
-https://doi.org/10.1016/j.patter.2021.100293.
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems
+Biomarkers Predict Response to Immune-Checkpoint Inhibitors.
+Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
 
 Mariathasan, S., Turley, S., Nickles, D. et al. TGFβ attenuates
 tumour response to PD-L1 blockade by contributing to exclusion of T cells.

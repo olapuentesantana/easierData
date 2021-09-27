@@ -7,11 +7,12 @@
 get_group_lrpairs()
 }
 \value{
-A list containing grouping information for 56 groups of ligand-receptor pairs.
+A list containing grouping information for 56 groups of l
+igand-receptor pairs.
 }
 \description{
-Obtain the information to group ligand-receptor pairs because of sharing the same gene,
-either as ligand or receptor.
+Obtain the information to group ligand-receptor pairs because of sharing
+the same gene, either as ligand or receptor.
 }
 \examples{
 if (interactive()) {

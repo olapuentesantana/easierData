@@ -11,10 +11,12 @@ A list containing for each cancer type and quantitative descriptor, a
 matrix of feature coefficient values across different tasks.
 }
 \description{
-Obtain the cancer-specific model feature parameters learned in Lapuente-Santana et al. (2021).
-For each quantitative descriptor, models were trained using multi-task learning with
-randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models
-are available (100 per task).
+Obtain the cancer-specific model feature parameters learned in
+Lapuente-Santana et al. (2021).
+For each quantitative descriptor, models were trained using
+multi-task learning with randomized cross-validation repeated
+100 times. For each quantitative descriptor, 1000 models are
+available (100 per task).
 }
 \examples{
 if (interactive()) {
@@ -23,7 +25,7 @@ if (interactive()) {
 }
 \references{
 Óscar Lapuente-Santana, Maisa van Genderen, Peter A. J. Hilbers,
-Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems Biomarkers
-Predict Response to Immune-Checkpoint Inhibitors. Patterns, 100293.
-https://doi.org/10.1016/j.patter.2021.100293.
+Francesca Finotello, and Federica Eduati. 2021. Interpretable Systems
+Biomarkers Predict Response to Immune-Checkpoint Inhibitors.
+Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
 }

@@ -2,18 +2,21 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_lr_frequency_TCGA}
 \alias{get_lr_frequency_TCGA}
-\title{Get the frequency of each ligand-receptor pair feature across the whole TCGA database}
+\title{Get the frequency of each ligand-receptor pair feature across
+the whole TCGA database}
 \usage{
 get_lr_frequency_TCGA()
 }
 \value{
-A numeric vector with the frequency of each ligand-receptor pair feature.
+A numeric vector with the frequency of each ligand-receptor
+pair feature.
 }
 \description{
-Obtain the frequency of each ligand-receptor pair feature across the whole TCGA database.
-Only ligand-receptor pairs with frequency different from zero are kept. Each cell-cell pair
-feature score is calculated as the sum of the inverse of the frequency of all the active
-ligand-receptor pairs.
+Obtain the frequency of each ligand-receptor pair feature across
+the whole TCGA database. Only ligand-receptor pairs with frequency
+different from zero are kept. Each cell-cell pair feature score is
+calculated as the sum of the inverse of the frequency of all the
+active ligand-receptor pairs.
 }
 \examples{
 if (interactive()) {
@@ -21,7 +24,7 @@ if (interactive()) {
 }
 }
 \references{
-The Cancer Genome Atlas Research Network., Weinstein, J., Collisson, E.
-et al. The Cancer Genome Atlas Pan-Cancer analysis project. Nat Genet 45, 1113–1120 (2013).
-https://doi.org/10.1038/ng.2764
+The Cancer Genome Atlas Research Network., Weinstein, J.,
+Collisson, E. et al. The Cancer Genome Atlas Pan-Cancer analysis project.
+Nat Genet 45, 1113–1120 (2013). https://doi.org/10.1038/ng.2764
 }
