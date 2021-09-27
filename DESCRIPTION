@@ -34,7 +34,6 @@ Description: Access to internal data required for the functional performance of 
     the CC-BY license. 
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 biocViews:
     RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData
 Depends: R (>= 4.1.0)
