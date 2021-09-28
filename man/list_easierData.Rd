@@ -13,6 +13,6 @@ A data.frame for a compact visualization.
 List the datasets contained in the easierData package.
 }
 \examples{
-    df <- list_easierData()
-    df
+df <- list_easierData()
+df
 }
