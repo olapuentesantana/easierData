@@ -17,7 +17,7 @@ TPM gene expression data.
 }
 \examples{
 if (interactive()) {
-  TCGA_sd_pancancer <- get_TCGA_sd_pancancer()
+    TCGA_sd_pancancer <- get_TCGA_sd_pancancer()
 }
 }
 \references{

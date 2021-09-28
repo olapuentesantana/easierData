@@ -16,6 +16,6 @@ the same gene, either as ligand or receptor.
 }
 \examples{
 if (interactive()) {
-  group_lrpairs <- get_group_lrpairs()
+    group_lrpairs <- get_group_lrpairs()
 }
 }

@@ -13,14 +13,14 @@
 #' df <- list_easierData()
 #' df
 list_easierData <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  myq <- AnnotationHub::query(eh, "easierData")
+    eh <- ExperimentHub::ExperimentHub()
+    myq <- AnnotationHub::query(eh, "easierData")
 
-  dataset_df <- data.frame(
-    eh_id = myq$ah_id,
-    title = myq$title
-  )
-  return(dataset_df)
+    dataset_df <- data.frame(
+        eh_id = myq$ah_id,
+        title = myq$title
+    )
+    return(dataset_df)
 }
 
 
@@ -54,13 +54,13 @@ list_easierData <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   se_mariathasan <- get_Mariathasan2018_PDL1_treatment()
+#'     se_mariathasan <- get_Mariathasan2018_PDL1_treatment()
 #' }
 get_Mariathasan2018_PDL1_treatment <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving Mariathasan2018_PDL1_treatment dataset...")
-  ehub_data <- eh[["EH6677"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving Mariathasan2018_PDL1_treatment dataset...")
+    ehub_data <- eh[["EH6677"]]
+    return(ehub_data)
 }
 
 
@@ -85,13 +85,13 @@ get_Mariathasan2018_PDL1_treatment <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   opt_models <- get_opt_models()
+#'     opt_models <- get_opt_models()
 #' }
 get_opt_models <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving cancer-specific feature models...")
-  ehub_data <- eh[["EH6678"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving cancer-specific feature models...")
+    ehub_data <- eh[["EH6678"]]
+    return(ehub_data)
 }
 
 
@@ -114,14 +114,14 @@ get_opt_models <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   opt_xtrain_stats <- get_opt_xtrain_stats()
+#'     opt_xtrain_stats <- get_opt_xtrain_stats()
 #' }
 get_opt_xtrain_stats <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving training set cancer-specifc features mean
-          and standard deviation...")
-  ehub_data <- eh[["EH6679"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving training set cancer-specifc features mean
+            and standard deviation...")
+    ehub_data <- eh[["EH6679"]]
+    return(ehub_data)
 }
 
 
@@ -142,14 +142,14 @@ get_opt_xtrain_stats <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   TCGA_mean_pancancer <- get_TCGA_mean_pancancer()
+#'     TCGA_mean_pancancer <- get_TCGA_mean_pancancer()
 #' }
 get_TCGA_mean_pancancer <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving mean of the TPM expression of each gene across
-          all TCGA cancer types...")
-  ehub_data <- eh[["EH6680"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving mean of the TPM expression of each gene across
+            all TCGA cancer types...")
+    ehub_data <- eh[["EH6680"]]
+    return(ehub_data)
 }
 
 
@@ -170,14 +170,14 @@ get_TCGA_mean_pancancer <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   TCGA_sd_pancancer <- get_TCGA_sd_pancancer()
+#'     TCGA_sd_pancancer <- get_TCGA_sd_pancancer()
 #' }
 get_TCGA_sd_pancancer <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving standard deviation of the TPM expression of each
-          gene across all TCGA cancer types...")
-  ehub_data <- eh[["EH6681"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving standard deviation of the TPM expression of each
+            gene across all TCGA cancer types...")
+    ehub_data <- eh[["EH6681"]]
+    return(ehub_data)
 }
 
 
@@ -202,14 +202,14 @@ get_TCGA_sd_pancancer <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   cor_scores_genes <- get_cor_scores_genes()
+#'     cor_scores_genes <- get_cor_scores_genes()
 #' }
 get_cor_scores_genes <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving list of genes used to define correlated scores
-          of immune response...")
-  ehub_data <- eh[["EH6682"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving list of genes used to define correlated scores
+            of immune response...")
+    ehub_data <- eh[["EH6682"]]
+    return(ehub_data)
 }
 
 
@@ -244,14 +244,14 @@ get_cor_scores_genes <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   intercell_networks <- get_intercell_networks()
+#'     intercell_networks <- get_intercell_networks()
 #' }
 get_intercell_networks <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving cancer-specific intercellular networks, including a
-          pan-cancer network...")
-  ehub_data <- eh[["EH6683"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving cancer-specific intercellular networks, including a
+            pan-cancer network...")
+    ehub_data <- eh[["EH6683"]]
+    return(ehub_data)
 }
 
 
@@ -275,14 +275,14 @@ get_intercell_networks <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   lr_frequency <- get_lr_frequency_TCGA()
+#'     lr_frequency <- get_lr_frequency_TCGA()
 #' }
 get_lr_frequency_TCGA <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving the frequency of each ligand-receptor pair feature across
-          the whole TCGA database...")
-  ehub_data <- eh[["EH6684"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving the frequency of each ligand-receptor pair feature across
+            the whole TCGA database...")
+    ehub_data <- eh[["EH6684"]]
+    return(ehub_data)
 }
 
 
@@ -298,13 +298,13 @@ get_lr_frequency_TCGA <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   group_lrpairs <- get_group_lrpairs()
+#'     group_lrpairs <- get_group_lrpairs()
 #' }
 get_group_lrpairs <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving groups of ligand-receptor pairs...")
-  ehub_data <- eh[["EH6685"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving groups of ligand-receptor pairs...")
+    ehub_data <- eh[["EH6685"]]
+    return(ehub_data)
 }
 
 
@@ -323,13 +323,13 @@ get_group_lrpairs <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   HGNC <- get_HGNC_annotation()
+#'     HGNC <- get_HGNC_annotation()
 #' }
 get_HGNC_annotation <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving gene symbols approved annotations...")
-  ehub_data <- eh[["EH6686"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving gene symbols approved annotations...")
+    ehub_data <- eh[["EH6686"]]
+    return(ehub_data)
 }
 
 
@@ -404,11 +404,11 @@ get_HGNC_annotation <- function() {
 #'
 #' @examples
 #' if (interactive()) {
-#'   easier_sigs <- get_scores_signature_genes()
+#'     easier_sigs <- get_scores_signature_genes()
 #' }
 get_scores_signature_genes <- function() {
-  eh <- ExperimentHub::ExperimentHub()
-  message("Retrieving gene signatures for each score of immune response...")
-  ehub_data <- eh[["EH6687"]]
-  return(ehub_data)
+    eh <- ExperimentHub::ExperimentHub()
+    message("Retrieving gene signatures for each score of immune response...")
+    ehub_data <- eh[["EH6687"]]
+    return(ehub_data)
 }

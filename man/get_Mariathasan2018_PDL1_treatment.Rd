@@ -11,8 +11,8 @@ http://research-pub.gene.com/IMvigor210CoreBiologies/
 get_Mariathasan2018_PDL1_treatment()
 }
 \value{
-A \linkS4class{SummarizedExperiment} object with counts and TPM
-quantifications.
+A \linkS4class{SummarizedExperiment} object with counts
+and TPM quantifications.
 }
 \description{
 Obtain the gene expression data (count and tpm values)
@@ -22,14 +22,14 @@ and the sample metadata from Mariathasan et al. (2018).
 The \code{SummarizedExperiment} object returned contains:
 \itemize{
 \item two assays: \code{counts} and \code{tpm}.
-\item additional sample metadata in the \code{colData} slot, including  pat_id (the id
-of the patient in the original study), BOR to PD-L1 treatment, and TMB
-(Tumor Mutational Burden).
+\item additional sample metadata in the \code{colData} slot, including
+pat_id (the id of the patient in the original study), BOR to
+PD-L1 treatment, and TMB (Tumor Mutational Burden).
 }
 }
 \examples{
 if (interactive()) {
-  se_mariathasan <- get_Mariathasan2018_PDL1_treatment()
+    se_mariathasan <- get_Mariathasan2018_PDL1_treatment()
 }
 }
 \references{

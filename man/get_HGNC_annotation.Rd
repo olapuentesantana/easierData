@@ -17,7 +17,7 @@ Get the gene symbols approved annotations
 }
 \examples{
 if (interactive()) {
-  HGNC <- get_HGNC_annotation()
+    HGNC <- get_HGNC_annotation()
 }
 }
 \references{

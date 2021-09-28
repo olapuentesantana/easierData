@@ -18,7 +18,7 @@ for normalization of the test set.
 }
 \examples{
 if (interactive()) {
-  opt_xtrain_stats <- get_opt_xtrain_stats()
+    opt_xtrain_stats <- get_opt_xtrain_stats()
 }
 }
 \references{

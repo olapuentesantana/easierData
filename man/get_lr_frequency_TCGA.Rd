@@ -20,7 +20,7 @@ active ligand-receptor pairs.
 }
 \examples{
 if (interactive()) {
-  lr_frequency <- get_lr_frequency_TCGA()
+    lr_frequency <- get_lr_frequency_TCGA()
 }
 }
 \references{

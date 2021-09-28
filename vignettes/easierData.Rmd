@@ -2,22 +2,29 @@
 title: "easier Data"
 author:
 - name: Óscar Lapuente-Santana
-  affiliation: Computational Biology group, Department of Biomedical Engineering,
-   Eindhoven University of Technology (BME, TU/e)
+  affiliation: 
+  - &id Computational Biology group, Department of Biomedical Engineering,
+    Eindhoven University of Technology (BME, TU/e)
   email: o.lapuente.santana@tue.nl
 - name: Federico Marini
-  affiliation: Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI, Mainz)
+  affiliation:
+  - Institute of Medical Biostatistics, Epidemiology and Informatics 
+    (IMBEI, Mainz)
   email: marinif@uni-mainz.de
 - name: Arsenij Ustjanzew
-  affiliation: Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI, Mainz)
+  affiliation: 
+  - Institute of Medical Biostatistics, Epidemiology and Informatics 
+    (IMBEI, Mainz)
   email: arsenij.ustjanzew@uni-mainz.de
 - name: Francesca Finotello
-  affiliation: Institute of Bioinformatics, Biocenter Medical University of Innsbruck
+  affiliation: 
+  - Institute of Bioinformatics, Biocenter Medical University of Innsbruck
   email: francesca.finotello@i-med.ac.at
 - name: Federica Eduati
   affiliation: 
-  - Computational Biology group, Department of Biomedical Engineering, Eindhoven University of Technology (BME, TU/e)
-  - Institute for Complex Molecular Systems, Eindhoven University of Technology (ICMS, TU/e)
+  - *id
+  - Institute for Complex Molecular Systems, Eindhoven University of 
+    Technology (ICMS, TU/e)
   email: f.eduati@tue.nl
 date: "`r Sys.Date()`"
 package: easierData
@@ -51,50 +58,64 @@ with samples from 192 patients. This is provided as a `SummarizedExperiment`
 object containing:
 
   - Two assays: `counts` and `tpm` expression values.
-  - Additional sample metadata in the `colData` slot, including  pat_id 
-  (the id of the patient in the original study), BOR, and TMB (Tumor Mutational Burden).
+  - Additional sample metadata in the `colData` slot, including pat_id 
+    (the id of the patient in the original study), BOR, and
+    TMB (Tumor Mutational Burden).
   
-    The processed data is publicly available from Mariathasan et al. "TGF-B attenuates
-    tumour response to PD-L1 blockade by contributing to exclusion of T cells", published in Nature, 2018 [doi:10.1038/nature25501](https://doi.org/10.1038/nature25501) via [`IMvigor210CoreBiologies`](http://research-pub.gene.com/IMvigor210CoreBiologies/) package under the CC-BY license. 
+    The processed data is publicly available from Mariathasan et al. 
+    "TGF-B attenuates tumour response to PD-L1 blockade by contributing 
+    to exclusion of T cells", published in Nature, 2018 
+    [doi:10.1038/nature25501](https://doi.org/10.1038/nature25501) via 
+    [`IMvigor210CoreBiologies`](http://research-pub.gene.com/IMvigor210CoreBiologies/)
+    package under the CC-BY license. 
   
-The `easierData` data package also includes multiple data objects so-called internal
-data of `easier` package since they are indispensable for the functional performance 
-of the package. This includes:
+The `easierData` data package also includes multiple data objects so-called
+internal data of `easier` package since they are indispensable for the 
+functional performance of the package. This includes:
 
-* **opt_models**: the cancer-specific model feature parameters learned in @LAPUENTESANTANA2021100293.
-For each quantitative descriptor (e.g. pathway activity), models were trained using multi-task learning
-with randomized cross-validation repeated 100 times. For each quantitative descriptor, 1000 models are 
-available (100 per task). This is provided as a list containing, for each cancer type and quantitative 
+* **opt_models**: the cancer-specific model feature parameters learned in @LAPUENTESANTANA2021100293. 
+For each quantitative descriptor (e.g. pathway activity), 
+models were trained using multi-task learning with randomized cross-validation repeated 
+100 times. For each quantitative descriptor, 1000 models are  available (100 per task). 
+This is provided as a list containing, for each cancer type and quantitative 
 descriptor, a matrix of feature coefficient values across different tasks.
     
-* **opt_xtrain_stats**: the cancer-specific features mean and standard deviation of each quantitative
-descriptor (e.g. pathway activity) training set used in @LAPUENTESANTANA2021100293 during randomized 
-cross-validation repeated 100 times, required for normalization of the test set. This is provided as 
-a list containing, for each cancer type and quantitative descriptor, a matrix with feature mean and sd 
+* **opt_xtrain_stats**: the cancer-specific features mean and standard deviation of 
+each quantitative descriptor (e.g. pathway activity) training set used in 
+@LAPUENTESANTANA2021100293 during randomized cross-validation repeated 100 times, 
+required for normalization of the test set. This is provided as  a list containing,
+for each cancer type and quantitative descriptor, a matrix with feature mean and sd 
 values across the 100 cross-validation runs.
     
-* **TCGA_mean_pancancer**: a numeric vector with the mean of the TPM expression of each gene across all 
-TCGA cancer types, required for normalization of input TPM gene expression data.
+* **TCGA_mean_pancancer**: a numeric vector with the mean of the TPM expression of 
+each gene across all TCGA cancer types, required for normalization of input TPM gene 
+expression data.
     
-* **TCGA_sd_pancancer**: a numeric vector with the standard deviation (sd) of the TPM expression of each 
-gene across all TCGA cancer types, required for normalization of input TPM gene expression data.
+* **TCGA_sd_pancancer**: a numeric vector with the standard deviation (sd) of the 
+TPM expression of each gene across all TCGA cancer types, required for normalization 
+of input TPM gene expression data.
     
-* **cor_scores_genes**: a character vector with the list of genes used to define correlated scores of 
-immune response. These scores were found to be highly correlated across all 18 cancer types [@LAPUENTESANTANA2021100293].
+* **cor_scores_genes**: a character vector with the list of genes used to define 
+correlated scores ofimmune response. These scores were found to be highly correlated
+across all 18 cancer types [@LAPUENTESANTANA2021100293].
     
-* **intercell_networks**: a list with the cancer-specific intercellular networks, including 
-a pan-cancer network.
+* **intercell_networks**: a list with the cancer-specific intercellular networks, 
+including a pan-cancer network.
     
-* **lr_frequency_TCGA**: a numeric vector containing the frequency of each ligand-receptor pair 
-feature across the whole TCGA database.
+* **lr_frequency_TCGA**: a numeric vector containing the frequency of each 
+ligand-receptor pair feature across the whole TCGA database.
     
-* **group_lrpairs**: a list with the information on how to group ligand-receptor pairs because of 
-sharing the same gene, either as ligand or receptor.
+* **group_lrpairs**: a list with the information on how to group ligand-receptor 
+pairs because of sharing the same gene, either as ligand or receptor.
     
-* **HGNC_annotation**: a data.frame with the gene symbols approved annotations obtained from https://www.genenames.org/tools/multi-symbol-checker/ [@Tweedie2021].
+* **HGNC_annotation**: a data.frame with the gene symbols approved annotations 
+obtained from https://www.genenames.org/tools/multi-symbol-checker/ [@Tweedie2021].
     
-* **scores_signature_genes**: a list with the gene signatures for each score of immune response: CYT [@ROONEY201548], TLS [@Cabrita2020], IFNy [@Ayers2017], Ayers_expIS [@Ayers2017], 
-Tcell_inflamed [@Ayers2017], Roh_IS [@Roheaah3560], Davoli_IS [@Davolieaaf8399], chemokines [@Messina2012], IMPRES [@Auslander2018], MSI [@Fu2019] and RIR [@JERBYARNON2018984].
+* **scores_signature_genes**: a list with the gene signatures for each score of 
+immune response: CYT [@ROONEY201548], TLS [@Cabrita2020], IFNy [@Ayers2017], 
+Ayers_expIS [@Ayers2017], Tcell_inflamed [@Ayers2017], Roh_IS [@Roheaah3560],
+Davoli_IS [@Davolieaaf8399], chemokines [@Messina2012], IMPRES [@Auslander2018],
+MSI [@Fu2019] and RIR [@JERBYARNON2018984].
 
 # Load easier Data
 
@@ -122,8 +143,8 @@ An overview is provided also in tabular form:
 list_easierData()
 ```
 
-The individual data objects can be accessed using either their ExperimentHub accession number, or 
-the convenience functions provided in this package - both calls are equivalent.
+The individual data objects can be accessed using either their ExperimentHub accession
+number, or the convenience functions provided in this package - both calls are equivalent.
 For instance to access the `Mariathasan2018_PDL1_treatment` example dataset:
 
 ```{r, message=FALSE}

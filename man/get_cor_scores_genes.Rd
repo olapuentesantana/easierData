@@ -2,7 +2,8 @@
 % Please edit documentation in R/easierData_retrieval.R
 \name{get_cor_scores_genes}
 \alias{get_cor_scores_genes}
-\title{Get the list of genes used to define correlated scores of immune response}
+\title{Get the list of genes used to define correlated scores
+of immune response}
 \usage{
 get_cor_scores_genes()
 }
@@ -16,7 +17,7 @@ all 18 cancer types.
 }
 \examples{
 if (interactive()) {
-  cor_scores_genes <- get_cor_scores_genes()
+    cor_scores_genes <- get_cor_scores_genes()
 }
 }
 \references{

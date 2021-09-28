@@ -17,7 +17,7 @@ gene expression data.
 }
 \examples{
 if (interactive()) {
-  TCGA_mean_pancancer <- get_TCGA_mean_pancancer()
+    TCGA_mean_pancancer <- get_TCGA_mean_pancancer()
 }
 }
 \references{

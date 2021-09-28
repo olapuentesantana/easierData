@@ -20,7 +20,7 @@ available (100 per task).
 }
 \examples{
 if (interactive()) {
-  opt_models <- get_opt_models()
+    opt_models <- get_opt_models()
 }
 }
 \references{

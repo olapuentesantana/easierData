@@ -16,7 +16,7 @@ chemokines, IMPRES, MSI and RIR.
 }
 \examples{
 if (interactive()) {
-  easier_sigs <- get_scores_signature_genes()
+    easier_sigs <- get_scores_signature_genes()
 }
 }
 \references{

@@ -25,7 +25,7 @@ the cancer-specific networks.
 }
 \examples{
 if (interactive()) {
-  intercell_networks <- get_intercell_networks()
+    intercell_networks <- get_intercell_networks()
 }
 }
 \references{
