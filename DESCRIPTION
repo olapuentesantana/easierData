@@ -43,8 +43,7 @@ Suggests:
     rmarkdown,
     BiocStyle,
     testthat (>= 3.0.0)
-biocViews:
-    RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData, CancerData
+biocViews: RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData, CancerData
 VignetteBuilder: knitr
 Encoding: UTF-8
 VignetteBuilder: knitr
