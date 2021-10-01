@@ -33,9 +33,6 @@ Description: Access to internal data required for the functional performance of 
     [`IMvigor210CoreBiologies`](http://research-pub.gene.com/IMvigor210CoreBiologies/) package under
     the CC-BY license. 
 License: MIT + file LICENSE
-Encoding: UTF-8
-biocViews:
-    RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData, CancerData
 Depends: R (>= 4.1.0)
 Imports: 
     ExperimentHub,
@@ -47,7 +44,10 @@ Suggests:
     rmarkdown,
     BiocStyle,
     testthat (>= 3.0.0)
+biocViews:
+    RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData, CancerData
 VignetteBuilder: knitr
+Encoding: UTF-8
 RoxygenNote: 7.1.2
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
