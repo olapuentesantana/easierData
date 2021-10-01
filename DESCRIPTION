@@ -35,7 +35,7 @@ Description: Access to internal data required for the functional performance of 
 License: MIT + file LICENSE
 Encoding: UTF-8
 biocViews:
-    RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData
+    RNASeqData, ExperimentHub, ReproducibleResearch, ImmunoOncologyData, CancerData
 Depends: R (>= 4.1.0)
 Imports: 
     ExperimentHub,
