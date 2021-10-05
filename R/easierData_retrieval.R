@@ -181,11 +181,12 @@ get_TCGA_sd_pancancer <- function() {
 }
 
 
-#' Get the list of genes used to define correlated scores of immune response
+#' Get the list of genes used to define correlated
+#' scores of immune response
 #'
-#' Obtain the list of genes used to define each of the correlated scores of
-#' immune response. These scores were found to be highly correlated across
-#' all 18 cancer types.
+#' Obtain the list of genes used to define each of the correlated
+#' scores of immune response. These scores were found to be highly
+#' correlated across all 18 cancer types.
 #'
 #' @return A character vector with gene names.
 #'
@@ -279,8 +280,8 @@ get_intercell_networks <- function() {
 #' }
 get_lr_frequency_TCGA <- function() {
     eh <- ExperimentHub::ExperimentHub()
-    message("Retrieving the frequency of each ligand-receptor pair feature across
-            the whole TCGA database...")
+    message("Retrieving the frequency of each ligand-receptor
+    pair feature across the whole TCGA database...")
     ehub_data <- eh[["EH6684"]]
     return(ehub_data)
 }
