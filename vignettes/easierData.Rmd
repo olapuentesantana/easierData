@@ -29,7 +29,15 @@ author:
 date: "`r Sys.Date()`"
 package: easierData
 output: 
-    BiocStyle::html_document
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: show
+    theme: lumen
+  pdf_document:
+    toc: yes
+    number_sections: true
 bibliography: references_easierData.bib
 vignette: >
     %\VignetteIndexEntry{easier data}
@@ -96,7 +104,7 @@ TPM expression of each gene across all TCGA cancer types, required for normaliza
 of input TPM gene expression data.
     
 * **cor_scores_genes**: a character vector with the list of genes used to define 
-correlated scores ofimmune response. These scores were found to be highly correlated
+correlated scores of immune response. These scores were found to be highly correlated
 across all 18 cancer types [@LAPUENTESANTANA2021100293].
     
 * **intercell_networks**: a list with the cancer-specific intercellular networks, 
