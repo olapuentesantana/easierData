@@ -1,6 +1,6 @@
-#' easierData
+#' easierData: easier data package
 #'
-#' This ExperimentHub package provides access to an exemplary
+#' This experiment data package provides access to an exemplary
 #' bladder cancer dataset with both processed RNA-seq data and
 #' information on response to ICB therapy publicly available via
 #' IMvigor210CoreBiologies package, and to internal data
