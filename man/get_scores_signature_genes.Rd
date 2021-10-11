@@ -34,7 +34,7 @@ McClanahan, Mark Ayers AND Jared Lunceford AND Michael Nebozhyn
 AND Erin Murphy AND Andrey Loboda AND David R. Kaufman AND Andrew Albright
 AND Jonathan D. Cheng AND S. Peter Kang AND Veena Shankaran AND Sarina A.
 Piha-Paul AND Jennifer Yearley AND Tanguy Y. Seiwert AND Antoni Ribas AND
-Terrill K. 2017. “IFN-γ–Related mRNA Profile Predicts Clinical Response
+Terrill K. 2017. “IFN-y–Related mRNA Profile Predicts Clinical Response
 to PD-1 Blockade.” The Journal of Clinical Investigation 127 (8): 2930–40.
 https://doi.org/10.1172/JCI91190.
 
