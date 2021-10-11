@@ -29,20 +29,21 @@ author:
 date: "`r Sys.Date()`"
 package: easierData
 output: 
+  pdf_document:
+    latex_engine: xelatex
+    toc: yes
+    number_sections: true
   html_document:
     toc: true
     toc_float: true
     number_sections: true
     code_folding: show
     theme: lumen
-  pdf_document:
-    toc: yes
-    number_sections: true
 bibliography: references_easierData.bib
 vignette: >
     %\VignetteIndexEntry{easier data}
-    %\VignetteEngine{knitr::rmarkdown}
     %\VignetteEncoding{UTF-8}
+    %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r, include=FALSE}

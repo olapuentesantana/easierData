@@ -45,7 +45,7 @@ list_easierData <- function() {
 #' Biomarkers Predict Response to Immune-Checkpoint Inhibitors.
 #' Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
 #'
-#' @references  Mariathasan, S., Turley, S., Nickles, D. et al. TGFβ attenuates
+#' @references  Mariathasan, S., Turley, S., Nickles, D. et al. TGFB attenuates
 #' tumour response to PD-L1 blockade by contributing to exclusion of T cells.
 #' Nature 554, 544–548 (2018). https://doi.org/10.1038/nature25501.
 #'
@@ -197,7 +197,7 @@ get_TCGA_sd_pancancer <- function() {
 #' Biomarkers Predict Response to Immune-Checkpoint Inhibitors.
 #' Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
 #'
-#' @references  Mariathasan, S., Turley, S., Nickles, D. et al. TGFβ attenuates
+#' @references  Mariathasan, S., Turley, S., Nickles, D. et al. TGFB attenuates
 #' tumour response to PD-L1 blockade by contributing to exclusion of T cells.
 #' Nature 554, 544–548 (2018). https://doi.org/10.1038/nature25501.
 #'
@@ -354,7 +354,7 @@ get_HGNC_annotation <- function() {
 #' AND Erin Murphy AND Andrey Loboda AND David R. Kaufman AND Andrew Albright
 #' AND Jonathan D. Cheng AND S. Peter Kang AND Veena Shankaran AND Sarina A.
 #' Piha-Paul AND Jennifer Yearley AND Tanguy Y. Seiwert AND Antoni Ribas AND
-#' Terrill K. 2017. “IFN-γ–Related mRNA Profile Predicts Clinical Response
+#' Terrill K. 2017. “IFN-y–Related mRNA Profile Predicts Clinical Response
 #' to PD-1 Blockade.” The Journal of Clinical Investigation 127 (8): 2930–40.
 #' https://doi.org/10.1172/JCI91190.
 #'
