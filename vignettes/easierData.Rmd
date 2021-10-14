@@ -30,7 +30,6 @@ date: "`r Sys.Date()`"
 package: easierData
 output: 
   pdf_document:
-    latex_engine: xelatex
     toc: yes
     number_sections: true
   html_document:
