@@ -1,7 +1,7 @@
 ---
 title: "easier Data"
 author:
-- name: Óscar Lapuente-Santana
+- name: Oscar Lapuente-Santana
   affiliation: 
   - &id Computational Biology group, Department of Biomedical Engineering,
     Eindhoven University of Technology (BME, TU/e)
@@ -29,15 +29,15 @@ author:
 date: "`r Sys.Date()`"
 package: easierData
 output: 
+  html_document: 
+    toc: yes
+    toc_float: yes
+    number_sections: yes
+    code_folding: show
+    theme: lumen
   pdf_document:
     toc: yes
     number_sections: true
-  html_document:
-    toc: true
-    toc_float: true
-    number_sections: true
-    code_folding: show
-    theme: lumen
 bibliography: references_easierData.bib
 vignette: >
     %\VignetteIndexEntry{easier data}
