@@ -8,17 +8,28 @@ Experiment Data package for `easier´ R package, which consists of:
   Turley, S., Nickles, D. et al. TGFβ attenuates tumour response to PD-L1 blockade by contributing to exclusion
   of T cells. Nature 554, 544–548 (2018). https://doi.org/10.1038/nature25501.
   
-## INSTALLATION
+## Installation
 
-You can install the development version of `easier` from GitHub with:
+You can install `easierData` package from bioconductor with:
+
+``` r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("easierData")
+          
+```
+
+Additionally, you can install the development version from the GitHub repository:
 
 ``` r
 library("remotes")
-remotes::install_github("olapuentesantana/easierData")
+remotes::install_github("olapuentesantana/easierData", 
+                        dependencies = TRUE, build_vignettes = TRUE)
 ```
 
-## CITATION
+## Citation
 
 If you use this data package in your work, please cite the original EaSIeR study:
 
-Lapuente-Santana, Óscar, Maisa van Genderen, Peter A. J. Hilbers, Francesca Finotello, and Federica Eduati. 2021. “Interpretable Systems Biomarkers Predict Response to Immune-Checkpoint Inhibitors.” Patterns, 100293. https://doi.org/10.1016/j.patter.2021.100293.
+Lapuente-Santana, Ó., van Genderen, M., Hilbers, P., Finotello, F., & Eduati, F. (2021). 'Interpretable systems biomarkers predict response to immune-checkpoint inhibitors.' Patterns (New York, N.Y.), 2(8), 100293. https://doi.org/10.1016/j.patter.2021.100293
