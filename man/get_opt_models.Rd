@@ -7,8 +7,12 @@
 get_opt_models()
 }
 \value{
-A list containing for each cancer type and quantitative descriptor, a
-matrix of feature coefficient values across different tasks.
+A list containing for each cancer type and quantitative
+descriptor, a matrix of feature coefficient values across
+different tasks. The cancer types, for which a cancer-specific
+model is available, are: "BLCA", "BRCA", "CESC", "CRC", "GBM",
+"HNSC", "KIRC", "KIRP", "LIHC", "LUAD", "LUSC", "NSCLC", "OV",
+"PAAD", "PRAD", "SKCM", "STAD", "THCA" and "UCEC".
 }
 \description{
 Obtain the cancer-specific model feature parameters learned in
