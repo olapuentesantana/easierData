@@ -73,8 +73,12 @@ get_Mariathasan2018_PDL1_treatment <- function() {
 #' 100 times. For each quantitative descriptor, 1000 models are
 #' available (100 per task).
 #'
-#' @return A list containing for each cancer type and quantitative descriptor, a
-#' matrix of feature coefficient values across different tasks.
+#' @return A list containing for each cancer type and quantitative
+#' descriptor, a matrix of feature coefficient values across
+#' different tasks. The cancer types, for which a cancer-specific
+#' model is available, are: "BLCA", "BRCA", "CESC", "CRC", "GBM",
+#' "HNSC", "KIRC", "KIRP", "LIHC", "LUAD", "LUSC", "NSCLC", "OV",
+#' "PAAD", "PRAD", "SKCM", "STAD", "THCA" and "UCEC".
 #'
 #' @export
 #'
@@ -97,13 +101,17 @@ get_opt_models <- function() {
 
 #' Get training set cancer-specific features mean and standard deviation
 #'
-#' Obtain the cancer-specific features mean and standard deviation of
-#' the training set used in Lapuente-Santana et al. (2021) for model training
-#' by  using randomized cross-validation repeated 100 times. It is required
-#' for normalization of the test set.
+#' Obtain the cancer-specific features mean and standard deviation (sd)
+#' of the training set used in Lapuente-Santana et al. (2021) for model
+#' training by  using randomized cross-validation repeated 100 times.
+#' It is required for normalization of the test set.
 #'
-#' @return A list containing for each cancer type and quantitative descriptor, a
-#' matrix with feature mean and sd values across the 100 cross-validation runs.
+#' @return A list containing for each cancer type and quantitative
+#' descriptor, a matrix with feature mean and sd values across the
+#' 100 cross-validation runs. The cancer types, for which cancer-specific
+#' features mean and sd is available, are: "BLCA", "BRCA", "CESC",
+#' "CRC", "GBM", "HNSC", "KIRC", "KIRP", "LIHC", "LUAD", "LUSC", "NSCLC",
+#' "OV", "PAAD", "PRAD", "SKCM", "STAD", "THCA" and "UCEC".
 #'
 #' @export
 #'
