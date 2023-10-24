@@ -1,6 +1,6 @@
 Package: easierData
 Title: easier internal data and exemplary dataset from IMvigor210CoreBiologies package
-Version: 1.7.0
+Version: 1.8.0
 Authors@R: 
     c(
         person(
