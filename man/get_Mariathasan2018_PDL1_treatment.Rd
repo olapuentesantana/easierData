@@ -11,7 +11,7 @@ http://research-pub.gene.com/IMvigor210CoreBiologies/
 get_Mariathasan2018_PDL1_treatment()
 }
 \value{
-A \linkS4class{SummarizedExperiment} object with counts
+A \link[SummarizedExperiment:SummarizedExperiment-class]{SummarizedExperiment::SummarizedExperiment} object with counts
 and TPM quantifications.
 }
 \description{

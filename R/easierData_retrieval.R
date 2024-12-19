@@ -35,7 +35,7 @@ list_easierData <- function() {
 #' pat_id (the id of the patient in the original study), BOR to
 #' PD-L1 treatment, and TMB (Tumor Mutational Burden).
 #'
-#' @return A \linkS4class{SummarizedExperiment} object with counts
+#' @return A [SummarizedExperiment::SummarizedExperiment] object with counts
 #' and TPM quantifications.
 #'
 #' @export
