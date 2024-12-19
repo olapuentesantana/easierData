@@ -15,5 +15,5 @@
 #' @importFrom SummarizedExperiment SummarizedExperiment
 #'
 #' @name easierData-pkg
-#' @docType package
-NULL
+#' @keywords internal
+"_PACKAGE"
